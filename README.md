@@ -23,7 +23,11 @@ Instructions:
         ```shell
         sudo apt-get update && sudo apt-get upgrade -y`
         ```
-6.	Install software. `sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter chromium xdotool tightvncserver watchdog`
+6.	Install software. 
+  *  
+      ```shell
+      sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter chromium xdotool tightvncserver watchdog`
+      ```
 7.	Configure sleep settings.
   *  `sudo nano /etc/lightdm/lightdm.conf`
   * Uncomment (remove the #) and edit this line in the [SeatDefaults] section:
