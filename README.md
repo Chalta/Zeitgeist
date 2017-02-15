@@ -7,9 +7,9 @@ Instructions:
 1.	Install Raspbian.
 2.	Change the password for the default "Pi" user.
 3.	Configure  settings
-    ```shell
-    sudo raspi-config
-    ```
+        ```shell
+        sudo raspi-config
+        ```
  * Set localization (keyboard and system locale)
  *	Enable SSH
  *	Expand root partition
