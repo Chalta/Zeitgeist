@@ -36,7 +36,7 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
 5.	Update and upgrade OS and software packages. If this was a fresh install of the [latest Raspbian release](https://www.raspberrypi.org/downloads/raspbian/), this step is not necessary. It doesn't hurt to run it anyway.
   *  
         ```shell
-        sudo apt-get update && sudo apt-get upgrade -y`
+        sudo apt-get update && sudo apt-get upgrade -y
         ```
         
 6.	Install new software.  (See below for des
@@ -48,7 +48,7 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
 7.	Configure sleep settings.
   *  `sudo nano /etc/lightdm/lightdm.conf`
   
-  * Uncomment (remove the #) and edit this line in the [SeatDefaults] section:
+  * Find the line below in the in the [SeatDefaults] section. Uncomment (remove the #) it and edit it as below :
   
   * `xserver-command=X -s 0 -dpms`
   
