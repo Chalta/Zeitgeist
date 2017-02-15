@@ -15,7 +15,9 @@ Instructions:
 4.	Configure wifi settings.
 5.	Update and upgrade `sudo apt-get update && sudo apt-get upgrade -y`
 6.	Install software. `sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter chromium xdotool tightvncserver watchdog`
-7.	Configure sleep settings.
+7.	Configure sleep settings. `sudo nano /etc/lightdm/lightdm.conf`
+  * Uncomment (remove the #) and edit this line in the [SeatDefaults] section:
+  * `xserver-command=X -s 0 -dpms`
 8.	[Configure start up behaviour.](https://github.com/Chalta/Zeitgeist/blob/master/autostart)
 9.	[Add ability to turn off HDMI signal at certain dates/times.] (https://github.com/Chalta/Zeitgeist/blob/master/rpi-hdmi.sh)
 10.	[Insert and configure script to run PCOLive across multiple service types on a preset schedule without human intervention:] (https://github.com/Chalta/Zeitgeist/blob/master/PCOlive.sh)
