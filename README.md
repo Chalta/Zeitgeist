@@ -39,7 +39,7 @@ Instructions:
 12. [Configure watchdog daemon to automatically reboot the Pi if hung.](https://github.com/Chalta/Zeitgeist/blob/master/watchdog)
 
 
-Software Details
+## Software Details
 
 | Software | Description | Reference   |
 |----------|-------------|--------------|
