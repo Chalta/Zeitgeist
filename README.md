@@ -14,11 +14,8 @@ Instructions:
   * Scroll down to boot_behavior and hit enter. Make sure “Yes” is marked, hit enter again.
 
 4.	Configure wifi settings.
-5.	Update and upgrade
+5.	Update and upgrade `sudo apt-get update && sudo apt-get upgrade -y`
 
-```shell
-sudo apt-get update && sudo apt-get upgrade -y 
-```
 
 6.	Install software.
 
