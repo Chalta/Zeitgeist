@@ -41,12 +41,12 @@ Instructions:
 
 | Software | Description | Man Page  |
 |----------|-------------|--------------|
-|ttf-mscorefonts-installer  | So webfonts render nicely | 		|
-|Chromium	|Browser	||
-|x11-xserver-utils	| Display utilities needed to turn off screensaver, etc.	||
-|unclutter	| Disables mouse pointer	Unclutter Man Page | http://manpages.ubuntu.com/manpages/zesty/en/man1/unclutter.1.html |
-|xdotool	| Fake keyboard/mouse input	||
-|tightvncserver	| Allows remote control and screensharing.	||
-|Watchdog ||		https://linux.die.net/man/8/watchdog |
+|ttf-mscorefonts-installer  | So webfonts render nicely | https://packages.debian.org/jessie/ttf-mscorefonts-installer		|
+|Chromium	|Browser	| https://manpages.debian.org/jessie/chromium/chromium.1.en.html |
+|x11-xserver-utils	| Display utilities needed to turn off screensaver, etc.	| https://packages.debian.org/sid/x11-xserver-utils |
+|unclutter	| Disables mouse pointer	Unclutter Man Page | https://manpages.debian.org/jessie/unclutter/unclutter.1.en.html |
+|xdotool	| Fake keyboard/mouse input	| https://manpages.debian.org/jessie/xdotool/xdotool.1.en.html |
+|tightvncserver	| Allows remote control and screensharing.	| https://manpages.debian.org/jessie/tightvncserver/tightvncserver.1.en.html |
+|Watchdog ||		https://manpages.debian.org/jessie/python-watchdog/watchdog.3.en.html |
 
 
