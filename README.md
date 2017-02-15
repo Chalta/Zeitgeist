@@ -2,7 +2,7 @@
 
 From German Zeitgeist, Zeit ‘time’ + Geist ‘spirit.’
 
-Use a Raspberry Pi 3 to display service countdown timers in HD over HDMI from [Planning Center Services Live 3.0](https://planning.center/2014/live-3/).
+Use a Raspberry Pi 3 to display highly-reliable automated service countdown timers in HD over HDMI from [Planning Center Services Live 3.0](https://planning.center/2014/live-3/).
 
 
 ## Instructions:
