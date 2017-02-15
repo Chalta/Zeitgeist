@@ -1,0 +1,17 @@
+#modify the autostart file in .config/lxsession/LXDE-pi/, so navigate to it like this:
+# cd .config/lxsession/LXDE-pi/
+# then append these lines:
+
+@chromium-browser --start-fullscreen --disable-infobars http://------------.com
+
+# don't blank the video device
+@xset s noblank
+
+# disable screen saver
+@xset s off
+
+# disable DPMS power management features (sleep).
+@xset –dpms
+
+# hides pointer when mouse idle for more than X seconds
+@unclutter -idle 0.1 -root
