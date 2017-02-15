@@ -4,7 +4,7 @@ Use a Raspberry Pi 3 to display service countdown timers in HD over HDMI from Pl
 
 Instructions:
 
-1. Install Raspbian.
+1. Install Raspbian. [official documentation](https://www.raspberrypi.org/documentation/installation/installing-images/)
 2. Change the password for the default "Pi" user.
 
 3. Configure settings
