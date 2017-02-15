@@ -2,7 +2,7 @@
 Use a Raspberry Pi 3 to display service countdown timers in HD over HDMI from Planning Center Services Live 3.0.
 
 
-Instructions:
+## Instructions:
 
 (Commands in `code blocks` are to be entered in the terminal.)
 
