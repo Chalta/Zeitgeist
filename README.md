@@ -21,7 +21,7 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
  * Set localization (keyboard and system locale)
  *	Enable SSH
  *	Expand root partition
- *	Set autologin on console (B2)
+
  * Scroll down to boot_behavior and hit enter. Make sure “Yes” is marked, hit enter again.
 4.	[Configure wifi settings.](https://www.raspberrypi.org/documentation/configuration/wireless/)
 5.	Update and upgrade OS and software packages. If this was a fresh install of the [latest Raspbian release](https://www.raspberrypi.org/downloads/raspbian/), this step is not necessary. It doesn't hurt to run it anyway.
