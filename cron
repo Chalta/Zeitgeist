@@ -1,0 +1,46 @@
+#---------------------------------------
+# Description
+#---------------------------------------
+
+# 
+#---------------------------------------
+# Instructions
+#---------------------------------------
+
+# open up crontab with following command: crontab -e
+# Add the lines below and edit them for your application.
+#       Edit cron timings - validate your expressions here: https://crontab.guru
+#       Replace XXXXXXX with the service type ID of each service (can be found by clicking "permalink" in the "Share" menu when viewing a single service).
+
+#--------------------------------------------
+# rpi-hdmi.sh
+#--------------------------------------------
+
+# Turn off the monitor, saving energy and hopefully extending the life of your monitor. The Raspberry Pi is still on and running however.
+
+# Turn HDMI Off (22:00/10:00pm)
+0 22 * * * /home/pi/rpi-hdmi.sh off
+
+# Turn HDMI On (7:00/7:00am)
+0 7 * * * /home/pi/rpi-hdmi.sh on 
+
+#--------------------------------------------
+# Weekly Sunday Services - Examples
+#--------------------------------------------
+
+#09:00 Services
+0 8 * * 0 DISPLAY=:0 /usr/local/bin/PCOlive.sh XXXXXXX
+
+#11:00 & 18:30 Services
+20 10 * * 0 DISPLAY=:0 /usr/local/bin/PCOlive.sh XXXXXXX
+20 15 * * 0 DISPLAY=:0 /usr/local/bin/PCOlive.sh XXXXXXX
+
+#--------------------------------------------
+# Special Services
+#--------------------------------------------
+
+# Christmas Eve – Every December 24
+0 13 24 12 * DISPLAY=:0 /usr/local/bin/PCOlive.sh XXXXXXX
+
+# Good Friday – Run every Thursday/Friday in March/April – when ‘goodfriday’ argument is set, bash script will abort on any day that isn’t Good Friday or Maundy Thursday.
+0 1 * 3-4 4-5 DISPLAY=:0 /usr/local/bin/PCOlive.sh XXXXXXX goodfriday
