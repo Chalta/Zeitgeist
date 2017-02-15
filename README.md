@@ -20,13 +20,13 @@ Use a Raspberry Pi 3 to display service countdown timers in HD over HDMI from Pl
  *	Expand root partition
  *	Set autologin on console (B2)
  * Scroll down to boot_behavior and hit enter. Make sure “Yes” is marked, hit enter again.
-4.	Configure wifi settings.
-5.	Update and upgrade
+4.	[Configure wifi settings.](https://www.raspberrypi.org/documentation/configuration/wireless/)
+5.	Update and upgrade OS and software packages. If this was a fresh install of the [latest Raspbian release](https://www.raspberrypi.org/downloads/raspbian/), this step is not necessary. It doesn't hurt to run it anyway.
   *  
         ```shell
         sudo apt-get update && sudo apt-get upgrade -y`
         ```
-6.	Install software. 
+6.	Install new software.  (See below for des
   *  
       ```shell
       sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter chromium xdotool tightvncserver watchdog
