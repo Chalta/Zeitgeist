@@ -37,3 +37,16 @@ Instructions:
 10.	[Insert and configure script to run PCOLive across multiple service types on a preset schedule without human intervention:] (https://github.com/Chalta/Zeitgeist/blob/master/PCOlive.sh)
 11.	[Schedule PCO Live and HDMI service in crontab](https://github.com/Chalta/Zeitgeist/blob/master/cron)
 12. [Configure watchdog daemon to automatically reboot the Pi if hung.](https://github.com/Chalta/Zeitgeist/blob/master/watchdog)
+
+
+| Software | Description | Man Page  |
+-------------------------------------
+|ttf-mscorefonts-installer  |   	So webfonts render nicely	|
+|Chromium	|Browser	
+|x11-xserver-utils	| Display utilities needed to turn off screensaver, etc.	|
+|unclutter	| Disables mouse pointer	Unclutter Man Page |
+|xdotool	| Fake keyboard/mouse input	|
+|tightvncserver	| Allows remote control and screensharing.	|
+|Watchdog ||		Man Page
+
+
