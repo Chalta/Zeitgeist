@@ -1,6 +1,10 @@
-#modify the autostart file in .config/lxsession/LXDE-pi/, so navigate to it like this:
-# cd .config/lxsession/LXDE-pi/
+# Modify the autostart file for the current user in .config/lxsession/LXDE-pi/
+# sudo nano ~/.config/lxsession/LXDE-pi/autostart
 # then append these lines:
+
+#start chromium in full-screen mode 
+#disable infobars (so we don't see "Chromium didn't shut down correctly" in case of unplanned power loss.)
+#load a default webpage
 
 @chromium-browser --start-fullscreen --disable-infobars http://------------.com
 
