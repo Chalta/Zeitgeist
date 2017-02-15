@@ -76,3 +76,18 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
 |Watchdog | Reboots automatically if system is hung. |		[Manual Page](https://manpages.debian.org/jessie/python-watchdog/watchdog.3.en.html) |
 
 
+## Remotely Accessing your Pi
+
+### SSH
+
+* From a Mac just type the following into Terminal `ssh pi@192.168.X.YY`, using the actual IP address of your RPi.
+
+* On Windows, install [puTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/).
+
+
+### VNC 
+
+* On a Mac, just type the following into Terminal: `vnc://192.168.X.YY` using the actual IP address of your RPi.
+
+* On Windows, install [RealVNC](https://www.realvnc.com/).
+
