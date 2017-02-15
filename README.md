@@ -27,9 +27,9 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
  
  *	Expand root partition
  
- * Select Enable Boot to Desktop/Scratch from the menu and press Enter
+ * Select *Enable Boot to Desktop/Scratch* from the menu and press Enter
  
- *  Select Desktop Login as user pi at the Graphical Desktop.
+ *  Select *Desktop Login as user pi at the Graphical Desktop*.
 
  * Scroll down to boot_behavior and hit enter. Make sure “Yes” is marked, hit enter again.
 4.	[Configure wifi settings.](https://www.raspberrypi.org/documentation/configuration/wireless/)
