@@ -41,12 +41,12 @@ Instructions:
 
 | Software | Description | Man Page  |
 |----------|-------------|--------------|
-|ttf-mscorefonts-installer  |  | 	So webfonts render nicely	|
+|ttf-mscorefonts-installer  | So webfonts render nicely | 		|
 |Chromium	|Browser	||
 |x11-xserver-utils	| Display utilities needed to turn off screensaver, etc.	||
-|unclutter	| Disables mouse pointer	Unclutter Man Page ||
+|unclutter	| Disables mouse pointer	Unclutter Man Page | http://manpages.ubuntu.com/manpages/zesty/en/man1/unclutter.1.html |
 |xdotool	| Fake keyboard/mouse input	||
-|tightvncserver	|| Allows remote control and screensharing.	|
-|Watchdog ||		Man Page |
+|tightvncserver	| Allows remote control and screensharing.	||
+|Watchdog ||		https://linux.die.net/man/8/watchdog |
 
 
