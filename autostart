@@ -1,6 +1,21 @@
+#---------------------------------------
+# Description
+#---------------------------------------
+
+# Modify autostart behaviour of the Raspberry Pi so it boots directly into an active countdown.
+
+#---------------------------------------
+# Instructions
+#---------------------------------------
+
 # Modify the autostart file for the current user in .config/lxsession/LXDE-pi/
 # sudo nano ~/.config/lxsession/LXDE-pi/autostart
 # then append these lines:
+
+#---------------------------------------
+# Append these lines:
+#---------------------------------------
+
 
 #start chromium in full-screen mode 
 #disable infobars (so we don't see "Chromium didn't shut down correctly" in case of unplanned power loss.)
