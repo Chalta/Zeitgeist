@@ -6,10 +6,7 @@ Instructions:
 
 1. Install Raspbian directly or via NOOBS. [official documentation](https://www.raspberrypi.org/documentation/installation/installing-images/)
 2. Change the password for the default "Pi" user. [official documentation](https://www.raspberrypi.org/documentation/linux/usage/users.md)
-  *  
-        ```shell
-        password
-        ```
+  *  `password`
   * Follow the prompts.
 3. Configure settings
   *  
