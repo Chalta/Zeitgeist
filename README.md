@@ -82,7 +82,7 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
 
 * From a Mac just type the following into Terminal `ssh pi@192.168.X.YY`, using the actual IP address of your RPi.
 
-* On Windows, install [puTTY](http://www.putty.org/).
+* On Windows, install [puTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/).
 
 
 ### VNC 
