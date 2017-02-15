@@ -2,7 +2,7 @@
 # Description
 #---------------------------------------
 
-# Modify autostart behaviour of the Raspberry Pi so it boots directly into an active countdown.
+# Modify autostart behaviour of the Raspberry Pi so it boots directly into an active countdown, hides mouse cursor, and disables pwer management features / screensavers.
 
 #---------------------------------------
 # Instructions
