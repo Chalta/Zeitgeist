@@ -18,9 +18,14 @@ Instructions:
  *	Set autologin on console (B2)
  * Scroll down to boot_behavior and hit enter. Make sure “Yes” is marked, hit enter again.
 4.	Configure wifi settings.
-5.	Update and upgrade `sudo apt-get update && sudo apt-get upgrade -y`
+5.	Update and upgrade
+  *  
+        ```shell
+        sudo apt-get update && sudo apt-get upgrade -y`
+        ```
 6.	Install software. `sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter chromium xdotool tightvncserver watchdog`
-7.	Configure sleep settings. `sudo nano /etc/lightdm/lightdm.conf`
+7.	Configure sleep settings.
+  *  `sudo nano /etc/lightdm/lightdm.conf`
   * Uncomment (remove the #) and edit this line in the [SeatDefaults] section:
   * `xserver-command=X -s 0 -dpms`
 8.	[Configure start up behaviour.](https://github.com/Chalta/Zeitgeist/blob/master/autostart)
