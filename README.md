@@ -40,7 +40,7 @@ Instructions:
 
 
 | Software | Description | Man Page  |
--------------------------------------
+|----------|-------------|--------------|
 |ttf-mscorefonts-installer  |  | 	So webfonts render nicely	|
 |Chromium	|Browser	||
 |x11-xserver-utils	| Display utilities needed to turn off screensaver, etc.	||
