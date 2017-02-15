@@ -26,7 +26,7 @@ Instructions:
 6.	Install software. 
   *  
       ```shell
-      sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter chromium xdotool tightvncserver watchdog`
+      sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter chromium xdotool tightvncserver watchdog
       ```
 7.	Configure sleep settings.
   *  `sudo nano /etc/lightdm/lightdm.conf`
