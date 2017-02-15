@@ -38,7 +38,7 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
         sudo apt-get update && sudo apt-get upgrade -y
         ```
         
-6.	Install new software.  (See below for des
+6.	Install new software.  (See below for descriptions of each package)
   *  
       ```shell
       sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter chromium xdotool tightvncserver watchdog
