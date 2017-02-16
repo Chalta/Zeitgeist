@@ -1,27 +1,11 @@
-#---------------------------------------
-# Description
-#---------------------------------------
-
 # Modify autostart behaviour of the Raspberry Pi so it boots directly into an active countdown, hides mouse cursor, and disables pwer management features / screensavers.
-
-#---------------------------------------
-# Instructions
-#---------------------------------------
-
-# Modify the autostart file for the current user in .config/lxsession/LXDE-pi/
-# sudo nano ~/.config/lxsession/LXDE-pi/autostart
-# then append these lines:
-
-#---------------------------------------
-# Append these lines:
-#---------------------------------------
 
 
 #start chromium in full-screen mode 
-#disable infobars (so we don't see "Chromium didn't shut down correctly" in case of unplanned power loss.)
-#load a default webpage
+   #disable infobars (so we don't see "Chromium didn't shut down correctly" in case of unplanned power loss.)
+   #load a default webpage
 
-@chromium-browser --start-fullscreen --disable-infobars http://------------.com
+@chromium-browser --start-fullscreen --disable-infobars https://services.planningcenteronline.com/service_types/XXXXX/plans/after/today/live
 
 # don't blank the video device
 @xset s noblank
