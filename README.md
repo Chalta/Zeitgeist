@@ -65,7 +65,7 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
 |unclutter	| Disables mouse pointer	 |[Manual Page](https://manpages.debian.org/jessie/unclutter/unclutter.1.en.html) |
 |xdotool	| Simulates keyboard/mouse input	| [Manual Page](https://manpages.debian.org/jessie/xdotool/xdotool.1.en.html) |
 |tightvncserver	| Optional: Allows remote control and screensharing so you can control your RPi from another computer.	| [Manual Page](https://manpages.debian.org/jessie/tightvncserver/tightvncserver.1.en.html) |
-|Watchdog | Reboots automatically if system is hung. |		[Manual Page](https://manpages.debian.org/jessie/python-watchdog/watchdog.3.en.html) |
+|Watchdog | Reboots automatically if system is hung. |		[Package Details](https://packages.debian.org/jessie/watchdog) |
 
 
 ## Remotely Accessing your Pi
