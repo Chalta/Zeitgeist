@@ -28,11 +28,13 @@
 #---------------------------------------
 
 
+All of the code below won't work for Pi 3. Refer to https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=147501
+
 # Load the watchdog kernel module
 $ sudo modprobe bcm2708_wdog
 
 # Load the module the next time the system boots, add a line to your /etc/modules file with "bcm2708_wdog".
-$ echo "bcm2708_wdog" | sudo tee -a /etc/modules
+$ echo "bcm2837_wdog" | sudo tee -a /etc/modules
 
 #Make sure the watchdog daemon runs after every boot:
 $ sudo chkconfig --add watchdog
