@@ -55,6 +55,13 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
 12. Configure watchdog daemon to automatically reboot the Pi if hung.  
   * sudo nano /boot/config.txt
   * Append these lines:
+     1. Like this:
+
+        ```c
+        printf("Hello, World!");
+        ```
+        
+        
        ```
        # activating the hardware watchdog
        dtparam=watchdog=on
