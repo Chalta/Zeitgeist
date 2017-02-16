@@ -11,7 +11,7 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
 
 1. Purchase a Raspberry Pi 3, Case, HDMI cable, USB Micro charging cable and Micro SD Card.
 
-1. Install Raspbian directly or via NOOBS. [(Official Documentation)](https://www.raspberrypi.org/documentation/installation/installing-images/)
+1. [Install Raspbian directly or via NOOBS.](https://www.raspberrypi.org/documentation/installation/installing-images/)
 
 2. Change the password for the default "Pi" user. [(Official Documentation)](https://www.raspberrypi.org/documentation/linux/usage/users.md)
   *  `password`
@@ -31,7 +31,7 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
  *  Select **Desktop Login as user pi at the Graphical Desktop**.
 
 4.	[Configure wifi settings.](https://www.raspberrypi.org/documentation/configuration/wireless/)
-5.	Update and upgrade OS and software packages. This will refresh the list of available packages, and upgrade installed packages to the latest versions. It will also update the kernel and the Raspberry Pi firmware to the latest stable versions.
+5.	[Update and upgrade OS and software packages.](https://www.raspberrypi.org/documentation/configuration/wireless/)) This will refresh the list of available packages, and upgrade installed packages to the latest versions. It will also update the kernel and the Raspberry Pi firmware to the latest stable versions.
   *  `sudo apt-get update && sudo apt-get dist-upgrade -y`
         
 6.	Install new software.  (See below for descriptions of each package)
