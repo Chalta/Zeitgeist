@@ -18,7 +18,7 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
   
 3. Configure settings
   *  
-        ```shell
+        `
         sudo raspi-config
         ```
  * Set localization (keyboard and system locale)
@@ -32,17 +32,17 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
  *  Select **Desktop Login as user pi at the Graphical Desktop**.
 
 4.	[Configure wifi settings.](https://www.raspberrypi.org/documentation/configuration/wireless/)
-5.	Update and upgrade OS and software packages. If this was a fresh install of the [latest Raspbian release](https://www.raspberrypi.org/downloads/raspbian/), this step is not necessary. It doesn't hurt to run it anyway.
+5.	Update and upgrade OS and software packages. This will refresh the list of available packages, and upgrade installed packages to the latest versions. It will also update the kernel and the Raspberry Pi firmware to the latest stable versions.
   *  
-        ```shell
-        sudo apt-get update && sudo apt-get upgrade -y
-        ```
+        `
+        sudo apt-get update && sudo apt-get dist-upgrade -y
+        `
         
 6.	Install new software.  (See below for descriptions of each package)
   *  
-      ```shell
+      `
       sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter chromium xdotool tightvncserver watchdog
-      ```
+      `
       
 7.	Configure sleep settings.
   *  `sudo nano /etc/lightdm/lightdm.conf`
