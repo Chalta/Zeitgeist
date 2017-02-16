@@ -56,14 +56,8 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
 11.	[Schedule PCO Live and HDMI service in crontab](https://github.com/Chalta/Zeitgeist/blob/master/cron)
 
 12. Configure watchdog daemon to automatically reboot the Pi if hung.  [[Ref]](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=147501)
-  * `sudo nano /boot/config.txt`
-  * Append these lines:
-  
-         ```
-         # activating the hardware watchdog
-         dtparam=watchdog=on
-         ```
-Comment: perhaps consolidate the above code into: $ echo "dtparam=watchdog=on" | sudo tee -a /boot/config.txt
+  * `$ echo "dtparam=watchdog=on" | sudo tee -a /boot/config.txt`
+
 
 ## Software Details
 
