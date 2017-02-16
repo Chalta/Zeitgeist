@@ -2,7 +2,7 @@
 # Description
 #--------------------------
 
-# Modify autostart behaviour of the Raspberry Pi so it boots directly into an active countdown, hides mouse cursor, and disables pwer management features / screensavers.
+# Modify autostart behaviour of the Raspberry Pi so it boots directly into a PCO Live webpage, hides the mouse cursor, and disables pwer management features / screensavers.
 # Append to the end of ~/.config/lxsession/LXDE-pi/autostart
 # Source: https://github.com/Chalta/Zeitgeist/edit/master/autostart
 
