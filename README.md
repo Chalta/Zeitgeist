@@ -44,7 +44,10 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
   
   * `xserver-command=X -s 0 -dpms`
   
-8.	[Configure start up behaviour.](https://github.com/Chalta/Zeitgeist/blob/master/autostart)
+8.	Configure start up behaviour.
+  * `
+# sudo nano ~/.config/lxsession/LXDE-pi/autostart `
+ * Append the lines found [here](https://github.com/Chalta/Zeitgeist/blob/master/autostart).
 
 9.	[Add ability to turn off HDMI signal at certain dates/times.] (https://github.com/Chalta/Zeitgeist/blob/master/rpi-hdmi.sh)
 
