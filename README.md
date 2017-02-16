@@ -40,9 +40,7 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
         
 6.	Install new software.  (See below for descriptions of each package)
   *  
-      `
-      sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter chromium xdotool tightvncserver watchdog
-      `
+      `sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter chromium xdotool tightvncserver watchdog`
       
 7.	Configure sleep settings.
   *  `sudo nano /etc/lightdm/lightdm.conf`
