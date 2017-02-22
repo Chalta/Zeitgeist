@@ -13,7 +13,7 @@
 
 #Instructions: Put this script in /home/pi/pco_live.sh
 #Then, make it executable: chmod +x /home/pi/pco_live.sh
-#Then update cron tab with the optional cron entries in this repository: https://github.com/Chalta/Zeitgeist/blob/master/cron
+#Then update cron tab with the cron entries in this file: https://github.com/Chalta/Zeitgeist/blob/master/cron
 
 #---------------------------------------
 # Code
