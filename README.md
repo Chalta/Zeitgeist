@@ -44,16 +44,19 @@ Notes:
   *  Reboot, then enable the VNC service as you did with SSH earlier in Step 3 of these instructions. [Official Documentation](https://www.raspberrypi.org/documentation/remote-access/vnc/)
   
 7.	Configure sleep settings. 
-  *  `sudo nano /etc/lightdm/lightdm.conf` Open the file in the 'Nano' text editor.
+  *  `sudo nano /etc/lightdm/lightdm.conf` (Opens the file in the 'Nano' text editor.)
   
   * Find the line below in the in the [SeatDefaults] section. You will find two [SeatDefaults] sections. Make sure you edit the second instance.  Uncomment (remove the #) it and edit it as below:
   
   * `xserver-command=X -s 0 -dpms`. (Disables screen saver and power management. [[Reference]](https://www.x.org/archive/X11R6.8.0/doc/Xserver.1.html))
+  * Press Control-O to save, and enter to confirm.
   
 8.	Configure start up behaviour.
   *   `sudo nano ~/.config/lxsession/LXDE-pi/autostart`
   
   * Append the lines found [here](https://github.com/Chalta/Zeitgeist/blob/master/autostart).
+  * Press Control-O to save, and enter to confirm.
+  * Reboot.
 
 9.	[Add ability to turn off HDMI signal at certain dates/times.] (https://github.com/Chalta/Zeitgeist/blob/master/rpi-hdmi.sh)
 
