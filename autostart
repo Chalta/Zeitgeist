@@ -11,7 +11,7 @@
 #--------------------------
 
 
-# Trick Chrome into always thinking it close cleanly. So we don't see "Chromium didn't shut down correctly" in case of unplanned power loss.)
+# Trick Chrome into always thinking it close cleanly, so we don't see "Chromium didn't shut down correctly".)
 @sed -i 's/exit_type\"\:\ \"Crashed/exit_type\"\:\ \"normal/g' /home/pi/.config/chromium/Profile 1/Preferences
 
 
