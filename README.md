@@ -39,8 +39,10 @@ Notes:
   *  When this is complete, let's clean up the temporary files: `sudo apt-get clean`
         
 6.	Install new software.  (See [below](https://github.com/Chalta/Zeitgeist/blob/master/README.md#software-details) for descriptions of each package)
-  * `sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter chromium xdotool tightvncserver watchdog`
-      
+  * `sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter ~~chromium~~ xdotool tightvncserver watchdog`
+  * (the package name for chromium has changed. it will be updated here shortly).
+  
+  
 7.	Configure sleep settings.
   *  `sudo nano /etc/lightdm/lightdm.conf`
   
