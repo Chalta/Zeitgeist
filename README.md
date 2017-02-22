@@ -29,7 +29,7 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
 4.	Configure wifi settings. [Official Instructions](https://www.raspberrypi.org/documentation/configuration/wireless/)
 5.	[Update and upgrade OS and software packages.](https://www.raspberrypi.org/documentation/configuration/wireless/) This will refresh the list of available packages, and upgrade installed packages to the latest versions. It will also update the kernel and the Raspberry Pi firmware to the latest stable versions.
   *  `sudo apt-get update && sudo apt-get dist-upgrade -y`
-  *  This could take a while. Make some tea while you wait.
+  *  This could take a while. Make some tea while you wait. Watch some Dr. Who. Anything sufficiently British to pay homage to the Pi's homeland.
   *  When this is complete, let's clean up the temporary files: `sudo apt-get clean`
         
 6.	Install new software.  (See [below](https://github.com/Chalta/Zeitgeist/blob/master/README.md#software-details) for descriptions of each package)
