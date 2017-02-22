@@ -16,7 +16,7 @@ sed -i 's/exit_type\"\:\ \"Crashed/exit_type\"\:\ \"normal/g' /home/pi/.config/c
 
 
 #start chromium in full-screen mode, disable infobars and load a default webpage
-
+#NOTE: Edit XXXXXX to your default service type
 @chromium-browser --start-fullscreen --disable-infobars https://services.planningcenteronline.com/service_types/XXXXX/plans/after/today/live
 
 # don't blank the video device
