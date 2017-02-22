@@ -20,7 +20,7 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
   
 3. Configure settings
  *  `sudo raspi-config` **or** Menu -> Preferences -> Raspberry Pi Configuration
- *	Expand Filesystem [1]
+ *	Expand Filesystem [1] (**this step is critical**)
  * Boot to desktop, automatically logged in as user 'pi'  [3-B4]
  * Set localization (keyboard and system locale) [5]
  *	Enable SSH [9-A4]
