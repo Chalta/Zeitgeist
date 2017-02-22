@@ -36,11 +36,11 @@ Notes:
 5.	[Update and upgrade OS and software packages.](https://www.raspberrypi.org/documentation/configuration/wireless/) This will refresh the list of available packages, and upgrade installed packages to the latest versions. It will also update the kernel and the Raspberry Pi firmware to the latest stable versions.
   *  `sudo apt-get update && sudo apt-get dist-upgrade -y`
   *  This could be very fast or it could take a while (hours) if your hardware or NOOBS card are a few versions behind. Make some tea while you wait. Watch some Dr. Who. Choose a sufficiently British activity to hono**u**r the UK origins of your device.
-  *  When this is complete, let's clean up the temporary files: `sudo apt-get clean`
+
         
 6.	Install new software.  (See [below](https://github.com/Chalta/Zeitgeist/blob/master/README.md#software-details) for descriptions of each package)
   * `sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter xdotool tightvncserver watchdog chromium-browser`
-  
+  *  When this is complete, let's clean up the temporary files from the previous steps: `sudo apt-get clean`
   
 7.	Configure sleep settings.
   *  `sudo nano /etc/lightdm/lightdm.conf`
@@ -69,7 +69,7 @@ Notes:
 | Software | Description | Reference   |
 |----------|-------------|--------------|
 |ttf-mscorefonts-installer  | Optional: So webfonts render nicely | [Package Details](https://packages.debian.org/jessie/ttf-mscorefonts-installer)		|
-|Chromium	| Web Browser	| [Manual Page](https://manpages.debian.org/jessie/chromium/chromium.1.en.html) |
+|Chromium-browser	| Web Browser	| [Manual Page](https://manpages.debian.org/jessie/chromium/chromium.1.en.html) |
 |x11-xserver-utils	| Display utilities needed to turn off screensaver, etc.	| [Package Details](https://packages.debian.org/sid/x11-xserver-utils) |
 |unclutter	| Disables mouse pointer	 |[Manual Page](https://manpages.debian.org/jessie/unclutter/unclutter.1.en.html) |
 |xdotool	| Simulates keyboard/mouse input	| [Manual Page](https://manpages.debian.org/jessie/xdotool/xdotool.1.en.html) |
