@@ -33,8 +33,11 @@ Notes:
  * Reboot when finished.
  
 4.	Configure wifi settings. [Official Instructions](https://www.raspberrypi.org/documentation/configuration/wireless/)
+
 5.	[Update and upgrade OS and software packages.](https://www.raspberrypi.org/documentation/configuration/wireless/) This will refresh the list of available packages, and upgrade installed packages to the latest versions. It will also update the kernel and the Raspberry Pi firmware to the latest stable versions.
+
   *  `sudo apt-get update && sudo apt-get dist-upgrade -y`
+  
   *  This could be very fast or it could take a while (hours) if your hardware or NOOBS card are a few versions behind. Make some tea while you wait. Watch some Dr. Who. Choose a sufficiently British activity to hono**u**r the UK origins of your device.
 
         
@@ -55,7 +58,9 @@ Notes:
   *   `sudo nano ~/.config/lxsession/LXDE-pi/autostart`
   
   * Append the lines found [here](https://github.com/Chalta/Zeitgeist/blob/master/autostart).
+  
   * Note: You can press SHIFT-INSERT to copy text on the clipboard to the document at the current cursor location. Press *Control-O* to save, and *Enter* to confirm.
+  
   * Reboot.
 
 9.	Optional: Add ability to turn off HDMI signal at certain dates/times.
@@ -64,17 +69,19 @@ Notes:
 
 
 10.	Insert and configure script to run PCOLive across multiple service types on a preset schedule without human intervention:  
-* Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/PCOlive.sh) in /home/PCOlive.sh 
-* Then, make it executable: chmod +x /home/pi/PCOlive.sh
+  * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/PCOlive.sh) in /home/PCOlive.sh 
+  * Then, make it executable: chmod +x /home/pi/PCOlive.sh
 
 
 
 
 11.	Schedule PCO Live and HDMI service in crontab
  *   Update cron tab `crontab -e` with the cron entries in [this file](https://github.com/Chalta/Zeitgeist/blob/master/cron).
+ 
  *   Note: Only add the rpi-HDMI entries if you completed step 9 above.
 
 12. Configure watchdog daemon to automatically reboot the Pi if hung.  [[Ref]](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=147501)
+
   * `echo "dtparam=watchdog=on" | sudo tee -a /boot/config.txt`
 
 
