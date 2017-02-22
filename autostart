@@ -10,11 +10,14 @@
 # Lines to be appended
 #--------------------------
 
-#start chromium in full-screen mode 
-   #disable infobars and restore last session (so we don't see "Chromium didn't shut down correctly" in case of unplanned power loss.)
-   #load a default webpage
 
-@chromium-browser --start-fullscreen --restore-last-session --disable-infobars https://services.planningcenteronline.com/service_types/XXXXX/plans/after/today/live
+# Trick Chrome into always thinking it close cleanly. So we don't see "Chromium didn't shut down correctly" in case of unplanned power loss.)
+sed -i 's/exit_type\"\:\ \"Crashed/exit_type\"\:\ \"normal/g' /home/pi/.config/Chrommium/Profile 1/Preferences
+
+
+#start chromium in full-screen mode, disable infobars and load a default webpage
+
+@chromium-browser --start-fullscreen --disable-infobars https://services.planningcenteronline.com/service_types/XXXXX/plans/after/today/live
 
 # don't blank the video device
 @xset s noblank
