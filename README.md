@@ -30,7 +30,6 @@ Notes:
  * Boot to desktop, automatically logged in as user 'pi'  [3-B4]
  * Set localization (keyboard and system locale) [5]
  *	Enable SSH [9-A4]
- * Enable VNC
  * Reboot when finished.
  
 4.	Configure wifi settings. [Official Instructions](https://www.raspberrypi.org/documentation/configuration/wireless/)
@@ -41,6 +40,7 @@ Notes:
         
 6.	Install new software.  (See [below](https://github.com/Chalta/Zeitgeist/blob/master/README.md#software-details) for descriptions of each package)
   * `sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter xdotool realvnc-vnc-server watchdog chromium-browser`
+  * Optional: Install a VNC client for remote control: `sudo apt-get install realvnc-vnc-server`. Then enable the VNC service as you did with SSH earlier in these instructions. [Official Documentation](https://www.raspberrypi.org/documentation/remote-access/vnc/)
   *  When this is complete, let's clean up the temporary files from the previous steps: `sudo apt-get clean`
   
 7.	Configure sleep settings. 
@@ -91,5 +91,5 @@ Notes:
 
 * On a Mac, just type the following into Terminal: `vnc://192.168.X.YY` using the actual IP address of your RPi.
 
-* On Windows, install [RealVNC](https://www.realvnc.com/).
+* On Windows, install [RealVNC](https://www.realvnc.com/). Free for non-commercial use.
 
