@@ -43,9 +43,9 @@ Notes:
   *  When this is complete, let's clean up the temporary files from the previous steps: `sudo apt-get clean`
   
 7.	Configure sleep settings. 
-  *  `sudo nano /etc/lightdm/lightdm.conf` Note: you will find two entries. The first *defines* this setting. Make sure you edit the second one.
+  *  `sudo nano /etc/lightdm/lightdm.conf` Open the file in the 'Nano' text editor.
   
-  * Find the line below in the in the [SeatDefaults] section. Uncomment (remove the #) it and edit it as below :
+  * Find the line below in the in the [SeatDefaults] section. You will find two [SeatDefaults] sections. Make sure you edit the second instance.  Uncomment (remove the #) it and edit it as below:
   
   * `xserver-command=X -s 0 -dpms`. (Disables screen saver and power management. [[Reference]](https://www.x.org/archive/X11R6.8.0/doc/Xserver.1.html))
   
