@@ -9,7 +9,7 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
 
 (Commands in `code blocks` are to be entered in the [terminal](https://www.raspberrypi.org/documentation/usage/terminal/).)
 
-1. Purchase a Raspberry Pi 3, Case, HDMI cable, USB Micro charging cable and Micro SD Card.
+1. Purchase a Raspberry Pi 3, Case, HDMI cable, USB Micro charging cable and Micro SD Card. Use your own USB keyboard and mouse or buy one. (The official case is very well-designed, and also available in black.)
 
 1. [Install Raspbian directly or via NOOBS.](https://www.raspberrypi.org/documentation/installation/installing-images/)
 
