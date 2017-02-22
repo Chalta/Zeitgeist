@@ -14,7 +14,7 @@
    #disable infobars (so we don't see "Chromium didn't shut down correctly" in case of unplanned power loss.)
    #load a default webpage
 
-@chromium-browser --start-fullscreen --disable-session-crashed-bubble --disable-infobars https://services.planningcenteronline.com/service_types/XXXXX/plans/after/today/live
+@chromium-browser --start-fullscreen --disable-infobars https://services.planningcenteronline.com/service_types/XXXXX/plans/after/today/live
 
 # don't blank the video device
 @xset s noblank
