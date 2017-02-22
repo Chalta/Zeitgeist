@@ -58,12 +58,17 @@ Notes:
   * Press Control-O to save, and enter to confirm.
   * Reboot.
 
-9.	Add ability to turn off HDMI signal at certain dates/times.
+9.	Optional: Add ability to turn off HDMI signal at certain dates/times.
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/rpi-hdmi.sh) in /home/pi/rpi-hdmi.sh
   * Then, make it executable: `chmod +x /home/pi/rpi-hdmi.sh`
-  * Then update cron tab with the optional cron entries in this repository: https://github.com/Chalta/Zeitgeist/blob/master/cron
+  * Then update cron tab `crontab -e` with the optional cron entries in [this file](https://github.com/Chalta/Zeitgeist/blob/master/cron).
 
-10.	[Insert and configure script to run PCOLive across multiple service types on a preset schedule without human intervention:] (https://github.com/Chalta/Zeitgeist/blob/master/PCOlive.sh)
+10.	Insert and configure script to run PCOLive across multiple service types on a preset schedule without human intervention:  
+* Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/PCOlive.sh) in /home/PCOlive.sh 
+* Then, make it executable: chmod +x /home/pi/PCOlive.sh
+* Then update cron tab `crontab -e` with the main cron entries in this [this file]https://github.com/Chalta/Zeitgeist/blob/master/cron
+
+
 
 11.	[Schedule PCO Live and HDMI service in crontab](https://github.com/Chalta/Zeitgeist/blob/master/cron)
 
