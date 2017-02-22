@@ -74,7 +74,7 @@ Notes:
 |x11-xserver-utils	| Display utilities needed to turn off screensaver, etc.	| [Package Details](https://packages.debian.org/sid/x11-xserver-utils) |
 |unclutter	| Disables mouse pointer	 |[Manual Page](https://manpages.debian.org/jessie/unclutter/unclutter.1.en.html) |
 |xdotool	| Simulates keyboard/mouse input	| [Manual Page](https://manpages.debian.org/jessie/xdotool/xdotool.1.en.html) |
-|tightvncserver	| Optional: Allows remote control and screensharing so you can control your RPi from another computer.	| [Manual Page](https://manpages.debian.org/jessie/tightvncserver/tightvncserver.1.en.html) |
+|realvnc-vnc-server 	| Optional: Allows remote control and screensharing so you can control your RPi from another computer.	| [Manual Page](https://www.realvnc.com/docs/raspberry-pi.html#raspberry-pi-setup) |
 |Watchdog | Reboots automatically if system is hung. |		[Package Details](https://packages.debian.org/jessie/watchdog) |
 
 
