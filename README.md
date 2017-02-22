@@ -24,6 +24,7 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
  * Boot to desktop, automatically logged in as user 'pi'  [3-B4]
  * Set localization (keyboard and system locale) [5]
  *	Enable SSH [9-A4]
+ * Reboot when finished.
  
 4.	Configure wifi settings. [Official Instructions](https://www.raspberrypi.org/documentation/configuration/wireless/)
 5.	[Update and upgrade OS and software packages.](https://www.raspberrypi.org/documentation/configuration/wireless/) This will refresh the list of available packages, and upgrade installed packages to the latest versions. It will also update the kernel and the Raspberry Pi firmware to the latest stable versions.
