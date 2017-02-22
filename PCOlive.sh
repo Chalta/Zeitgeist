@@ -19,7 +19,21 @@
 # Code
 #---------------------------------------
 
+#If argument goodfriday is set but today is not (Good Friday or Maundy Thursday), exit code.
+Case $2 in
+	goodfriday)
+  
+  #this code needs to be finalized. this is test code.
+	if [[ $(date '+%a') != ncal -e -2 days ]]
+	
+  
+  then
+    exit 0
+	fi
 
+#Otherwise *, run code normally.
+	*) 
+  
 #Operate on the first display on the local machine
 DISPLAY=:0
 
