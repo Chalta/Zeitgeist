@@ -10,23 +10,14 @@
 # Lines to be appended
 #--------------------------
 
+#First, make sure chrome awlays thinks it closed cleanly, so we don't see "Restore last session? Chromium didn't shut down correctly".       
+@sudo sed -i 's/Crashed/normal/g' "/home/pi/.config/chromium/Profile 1/Preferences"             #replaces the last session "Crashed" status, with "normal".
 
-# Trick Chrome into always thinking it close cleanly, so we don't see "Chromium didn't shut down correctly".)
-@sed -i 's/exit_type\"\:\ \"Crashed/exit_type\"\:\ \"normal/g' /home/pi/.config/chromium/Profile 1/Preferences
 
+#load a default web address in fullscreen mode
+@chromium-browser --start-fullscreen --disable-infobars https://services.planningcenteronline.com/service_types/57683/plans/after/today/live
 
-#start chromium in full-screen mode, disable infobars and load a default webpage
-#NOTE: Edit XXXXXX to your default service type
-@usr/bin/chromium-browser --start-fullscreen --disable-infobars https://services.planningcenteronline.com/service_types/XXXXX/plans/after/today/live
-
-# don't blank the video device
-@xset s noblank
-
-# disable screen saver
-@xset s off
-
-# disable DPMS power management features (sleep).
-@xset –dpms
-
-# hides pointer when mouse idle for more than X seconds
-@unclutter -idle 0.1 -root
+@xset s noblank                 #don't blank the video device
+@xset s off                     #disable screen saver
+@xset -dpms                     #disable DPMS power management features (sleep)
+@unclutter -idle 0.1 -root      #hide pointer when mouse idle for more than X seconds
