@@ -1,4 +1,4 @@
-#First, make sure chrome awlays thinks it closed cleanly, so we don't see "Restore last session? Chromium didn't shut down correctly".       
+#First, make sure chromium always thinks it closed cleanly, so we don't see "Restore last session? Chromium didn't shut down correctly".       
 
 #replaces the last session "Crashed" status, with "normal".
 @sudo sed -i 's/Crashed/normal/g' "/home/pi/.config/chromium/Profile 1/Preferences"    
