@@ -55,7 +55,7 @@ Notes:
   *   `sudo nano ~/.config/lxsession/LXDE-pi/autostart`
   
   * Append the lines found [here](https://github.com/Chalta/Zeitgeist/blob/master/autostart).
-  * Press Control-O to save, and enter to confirm.
+  * Note: You can press SHIFT-INSERT to copy text on the clipboard to the document at the current cursor location. Press *Control-O* to save, and *Enter* to confirm.
   * Reboot.
 
 9.	Optional: Add ability to turn off HDMI signal at certain dates/times.
@@ -66,7 +66,7 @@ Notes:
 10.	Insert and configure script to run PCOLive across multiple service types on a preset schedule without human intervention:  
 * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/PCOlive.sh) in /home/PCOlive.sh 
 * Then, make it executable: chmod +x /home/pi/PCOlive.sh
-* Then update cron tab `crontab -e` with the main cron entries in this [this file]https://github.com/Chalta/Zeitgeist/blob/master/cron
+* Then update cron tab `crontab -e` with the main cron entries in this [this file](https://github.com/Chalta/Zeitgeist/blob/master/cron)
 
 
 
