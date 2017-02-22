@@ -12,8 +12,6 @@
 #---------------------------------------
 
 #Instructions: Put this script in /home/pi/rpi-hdmi.sh
-#Then, make it executable: chmod +x /home/pi/rpi-hdmi.sh
-#Then update cron tab with the optional cron entries in this repository: https://github.com/Chalta/Zeitgeist/blob/master/cron
 
 #---------------------------------------
 # Code
