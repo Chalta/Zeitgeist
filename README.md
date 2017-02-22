@@ -39,7 +39,7 @@ Notes:
 
         
 6.	Install new software.  (See [below](https://github.com/Chalta/Zeitgeist/blob/master/README.md#software-details) for descriptions of each package)
-  * `sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter xdotool realvnc-vnc-server watchdog chromium-browser`
+  * `sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter xdotool sed realvnc-vnc-server watchdog chromium-browser`
   *  When this is complete, let's clean up the temporary files from the previous steps: `sudo apt-get clean`
   *  Reboot, then enable the VNC service as you did with SSH earlier in Step 3 of these instructions. [Official Documentation](https://www.raspberrypi.org/documentation/remote-access/vnc/)
   
@@ -89,6 +89,7 @@ Notes:
 |xdotool	| Simulates keyboard/mouse input	| [Manual Page](https://manpages.debian.org/jessie/xdotool/xdotool.1.en.html) |
 |realvnc-vnc-server 	| Optional: Allows remote control and screensharing so you can control your RPi from another computer.	| [Manual Page](https://www.realvnc.com/docs/raspberry-pi.html#raspberry-pi-setup) |
 |Watchdog | Reboots automatically if system is hung. |		[Package Details](https://packages.debian.org/jessie/watchdog) |
+|Sed | Stream editor for filtering and replacing text | [Manual Page](https://manpages.debian.org/jessie/sed/sed.1.en.html) |
 
 
 ## Remotely Accessing your Pi
