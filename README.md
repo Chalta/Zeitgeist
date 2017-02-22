@@ -40,8 +40,8 @@ Notes:
         
 6.	Install new software.  (See [below](https://github.com/Chalta/Zeitgeist/blob/master/README.md#software-details) for descriptions of each package)
   * `sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter xdotool realvnc-vnc-server watchdog chromium-browser`
-  * Optional: Install a VNC client for remote control: `sudo apt-get install realvnc-vnc-server`. Then enable the VNC service as you did with SSH earlier in these instructions. [Official Documentation](https://www.raspberrypi.org/documentation/remote-access/vnc/)
   *  When this is complete, let's clean up the temporary files from the previous steps: `sudo apt-get clean`
+  *  Reboot, then enable the VNC service as you did with SSH earlier in Step 3 of these instructions. [Official Documentation](https://www.raspberrypi.org/documentation/remote-access/vnc/)
   
 7.	Configure sleep settings. 
   *  `sudo nano /etc/lightdm/lightdm.conf` Open the file in the 'Nano' text editor.
