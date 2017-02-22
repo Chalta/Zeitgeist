@@ -61,16 +61,18 @@ Notes:
 9.	Optional: Add ability to turn off HDMI signal at certain dates/times.
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/rpi-hdmi.sh) in /home/pi/rpi-hdmi.sh
   * Then, make it executable: `chmod +x /home/pi/rpi-hdmi.sh`
-  * Then update cron tab `crontab -e` with the optional cron entries in [this file](https://github.com/Chalta/Zeitgeist/blob/master/cron).
+
 
 10.	Insert and configure script to run PCOLive across multiple service types on a preset schedule without human intervention:  
 * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/PCOlive.sh) in /home/PCOlive.sh 
 * Then, make it executable: chmod +x /home/pi/PCOlive.sh
-* Then update cron tab `crontab -e` with the main cron entries in this [this file](https://github.com/Chalta/Zeitgeist/blob/master/cron)
 
 
 
-11.	[Schedule PCO Live and HDMI service in crontab](https://github.com/Chalta/Zeitgeist/blob/master/cron)
+
+11.	Schedule PCO Live and HDMI service in crontab
+ *   Update cron tab `crontab -e` with the cron entries in [this file](https://github.com/Chalta/Zeitgeist/blob/master/cron).
+ *   Note: Only add the rpi-HDMI entries if you completed step 9 above.
 
 12. Configure watchdog daemon to automatically reboot the Pi if hung.  [[Ref]](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=147501)
   * `echo "dtparam=watchdog=on" | sudo tee -a /boot/config.txt`
