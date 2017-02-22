@@ -11,8 +11,8 @@
 # Instructions
 #---------------------------------------
 
-#Instructions: Put this script in /home/pi/PCOlive.sh
-#Then, make it executable: chmod +x /home/pi/rpi-hdmi.sh
+#Instructions: Put this script in /home/pi/pco_live.sh
+#Then, make it executable: chmod +x /home/pi/pco_live.sh
 #Then update cron tab with the optional cron entries in this repository: https://github.com/Chalta/Zeitgeist/blob/master/cron
 
 #---------------------------------------
