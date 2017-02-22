@@ -19,17 +19,12 @@ Use a Raspberry Pi 3 to display highly-reliable automated service countdown time
   * Follow the prompts (the default password is 'raspberry'), and choose a [strong password](https://xkcd.com/936/). Write it on the Pi's case if desired - unless you use a hardwired ethernet connection, this is going on your WiFi network, and we're worried a lot more about remote intruders than local ones.
   
 3. Configure settings
- *  `sudo raspi-config`
- * Set localization (keyboard and system locale)
+ *  `sudo raspi-config` **or** Menu -> Preferences -> Raspberry Pi Configuration
+ *	Expand Filesystem [1]
+ * Boot to desktop, automatically logged in as user 'pi'  [3-B4]
+ * Set localization (keyboard and system locale) [5]
+ *	Enable SSH [9-A4]
  
- *	Enable SSH
- 
- *	Expand root partition
- 
- * Select **Enable Boot to Desktop/Scratch** from the menu and press Enter
- 
- *  Select **Desktop Login as user pi at the Graphical Desktop**.
-
 4.	Configure wifi settings. [Official Instructions](https://www.raspberrypi.org/documentation/configuration/wireless/)
 5.	[Update and upgrade OS and software packages.](https://www.raspberrypi.org/documentation/configuration/wireless/) This will refresh the list of available packages, and upgrade installed packages to the latest versions. It will also update the kernel and the Raspberry Pi firmware to the latest stable versions.
   *  `sudo apt-get update && sudo apt-get dist-upgrade -y`
