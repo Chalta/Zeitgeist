@@ -113,6 +113,8 @@ sleep 3s
 #start Chromium and load the correct web address in fullscreen mode
 chromium-browser --start-fullscreen --disable-infobars https://services.planningcenteronline.com/service_types/"$servicetype"/plans/after/today/live
 
+#give the browser some time to open before moving on to the next step
+sleep 4s
 fi
 
 
