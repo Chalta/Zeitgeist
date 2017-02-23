@@ -67,7 +67,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 10.	Add shell functions. It's easiest to use the built-in LeafPad text editor for this step.
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/rpi-hdmi.sh) in /home/pi/rpi-hdmi.sh
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/start_chromium.sh ) in /home/start_chromium.sh
-  * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/pco_live.s) in /home/pco_live.sh 
+  * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/pco_live.sh) in /home/pco_live.sh 
   * Then, make each file executable via chmod (example: `chmod +x /home/pi/rpi-hdmi.sh` ) **or** via the File Manager -> Properties -> Permissions menu for each item.
 
 
