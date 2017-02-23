@@ -1,4 +1,6 @@
-# Zeitgeist
+![zeigeist logo](https://github.com/Chalta/Zeitgeist/blob/0.9/zeitgeist_wallpaper.png "Zeitgeist Logo")
+
+
 
 ### v0.9 Release Candidate
 
