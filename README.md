@@ -77,7 +77,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 12. Activate the built-in systemd software and hardware watchdog to automatically reboot the Pi if hung.  [[Ref]](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=147501)
 
-  *  [Patch insructions for previous versions to 0.9.](https://github.com/Chalta/Zeitgeist/blob/0.9/patch.md)
+  *  [Uninstall the watchdog package if coming from versions prior to Zeitgeist 0.9.](https://github.com/Chalta/Zeitgeist/blob/0.9/patch.md)
   * `sudo nano /etc/systemd/system.conf`
   *  Uncomment and change these two lines from:
    
