@@ -1,5 +1,5 @@
-When going from previous versions to 0.9:
+When patching from Zeitgeist versions before 0.9:
 
 `sudo apt-get remove watchdog`
 
-Then follow instructions in Readme.md
+Then follow watchdog instructions in Readme.md
