@@ -93,15 +93,17 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
        ShutdownWatchdogSec=10min
        ```
        
-   * The hardware watchdog built into the onboard chip will be "petted" every 10 seconds. If it isn't petted within 10 seconds, it will trigger a reboot.
-   * Reboot your Pi for the changes to take effect.
-   * Check that the watchdog is working: `cat /var/log/syslog | grep watchdog`
+   * Reboot your Pi for the changes to take effect, then check that the watchdog is working: 
+   * `cat /var/log/syslog | grep watchdog`
    * Ouput should look like:
+     
        ```
        bcm2835-wdt 20100000.watchdog: Broadcom BCM2835 watchdog timer
        Hardware watchdog 'Broadcom BCM2835 Watchdog timer', version 0
        raspi-server systemd[1]: Set hardware watchdog to 10s.
        ```
+  * Your Pi will now automatically reboot if is hung or frozen for more than 10 seconds.  
+     
 
 13. Log in to Planning Center Online.
    * It is **strongly** recommended that you use a dedicated user with the minimum-required permissions (viewer) for each service type. Do not log in with an admin-level user.
