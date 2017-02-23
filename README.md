@@ -22,14 +22,14 @@ From German Zeitgeist, Zeit ‘time’ + Geist ‘spirit.’
 3. Change the password for the default "Pi" user. [(Official Documentation)](https://www.raspberrypi.org/documentation/linux/usage/users.md)
   *  `passwd`
   
-  * Follow the prompts (the default password is 'raspberry'), and choose a [strong password](https://xkcd.com/936/). Write it on the Pi's case if desired - unless you use a hardwired ethernet connection, this is going on your WiFi network, and we're worried a lot more about remote intruders than local ones.
+  * Follow the prompts (the default password is 'raspberry'), and choose a [strong, unique password](https://xkcd.com/936/). Write it on the Pi's case, or in another safe place that you will remember. This is going on your facility's network, and we're worried a more about remote intruders than local ones.
   
 4. Configure settings
  *  `sudo raspi-config` **or** Menu -> Preferences -> Raspberry Pi Configuration
- *	Expand Filesystem [1] (**this step is critical**)
- * Boot to desktop, automatically logged in as user 'pi'  [3-B4]
- * Set localization (keyboard and system locale) [5]
- *	Enable SSH [9-A4]
+ *	Expand Filesystem \[1\] (**this step is critical**)
+ * Boot to desktop, automatically logged in as user 'pi'  \[3-B4\]
+ * Set localization (keyboard and system locale) \[5\]
+ *	Enable SSH \[9-A4\]
  * Reboot when finished.
  
 5.	Configure wifi settings. [Official Instructions](https://www.raspberrypi.org/documentation/configuration/wireless/)
