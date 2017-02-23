@@ -75,9 +75,33 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
  *   Edit the crontab entries to match your own service times and service type IDs. Example entries are provided. There are many helpful websites for [designing](https://crontab.guru/) and [validating](http://cron.schlitt.info/) crontab schedules.
  *   Note: Only schedule the rpi-HDMI script if you wish to turn off the monitor at certain times of day.
 
-12. Configure watchdog daemon to automatically reboot the Pi if hung.  [[Ref]](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=147501)
+12. Activate the built-in systemd software and hardware watchdog to automatically reboot the Pi if hung.  [[Ref]](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=147501)
 
-  * Feature coming soon.
+  *  [Patch insructions for previous versions to 0.9.](https://github.com/Chalta/Zeitgeist/blob/0.9/patch.md)
+  * `sudo nano /etc/systemd/system.conf`
+  *  Uncomment and change these two lines from:
+   
+     ```shell
+     #RuntimeWatchdogSec=20
+     #ShutdownWatchdogSec=10min
+     ```
+
+  * to:
+   
+       ```shell
+       RuntimeWatchdogSec=10
+       ShutdownWatchdogSec=10min
+       ```
+       
+   * The hardware watchdog built into the onboard chip will be "petted" every 10 seconds. If it isn't petted within 10 seconds, it will trigger a reboot.
+   * Reboot your Pi for the changes to take effect.
+   * Check that the watchdog is working: `cat /var/log/syslog | grep watchdog`
+   * Ouput should look like:
+       ```
+       bcm2835-wdt 20100000.watchdog: Broadcom BCM2835 watchdog timer
+       Hardware watchdog 'Broadcom BCM2835 Watchdog timer', version 0
+       raspi-server systemd[1]: Set hardware watchdog to 10s.
+       ```
 
 13. Log in to Planning Center Online.
    * It is **strongly** recommended that you use a dedicated user with the minimum-required permissions (viewer) for each service type. Do not log in with an admin-level user.
