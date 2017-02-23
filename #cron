@@ -14,6 +14,12 @@
 #       See here for more on permalinks: https://planning.center/2015/arrangements-keys-permalinks-android/
 
 #--------------------------------------------
+# Restart watchdog service at boot
+#--------------------------------------------
+
+@reboot sudo /usr/sbin/service watchdog start
+
+#--------------------------------------------
 # rpi-hdmi.sh
 #--------------------------------------------
 
