@@ -1,4 +1,5 @@
-# Zeitgeist
+# Zeitgeist 
+### v0.8 Beta
 
 From German Zeitgeist, Zeit ‘time’ + Geist ‘spirit.’
 
