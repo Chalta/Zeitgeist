@@ -45,8 +45,12 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
   *  This could be very fast or it could take a while (hours) if your hardware or NOOBS card are a few versions behind. Make some tea while you wait. Watch some Dr. Who. Choose a sufficiently British activity to hono**u**r the UK origins of your device.
 
         
-7.	Install new software.  (See [below](https://github.com/Chalta/Zeitgeist/blob/master/README.md#software-details) for descriptions of each package)
-  * `sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter xdotool sed realvnc-vnc-server chromium-browser`
+7.	Install needed software.  
+  *   Install the official packages. (See [below](https://github.com/Chalta/Zeitgeist/blob/master/README.md#software-details) for descriptions of each package)
+  
+      ```
+      sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter xdotool sed realvnc-vnc-server chromium-browser
+      ```
   *  When this is complete, let's clean up the temporary files from the previous steps: `sudo apt-get clean`
   *  Reboot, then enable the VNC service as you did with SSH earlier in Step 4 of these instructions. [Official Documentation](https://www.raspberrypi.org/documentation/remote-access/vnc/)
   
@@ -111,10 +115,12 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 13. Log in to Planning Center Online.
    * It is **strongly** recommended that you use a dedicated user with the minimum-required permissions (viewer) for each service type. Do not log in with an admin-level user.
    * Configure the timers to suit your requirements. as a recommended starting point:
-    *  Set the layout to *"Countdown: Full"*
-    *  Set the timer to *"Countdown: End item on time"*  (This option dynamically adjusts the countdown to keep your service on track.)
-    *  Set the colour theme to *"Dark"*
- 
+   
+         *  Set the layout to *"Countdown: Full"*
+         *  Set the timer to *"Countdown: End item on time"*  (This option dynamically adjusts the countdown to keep your service on track.)
+         *  Set the colour theme to *"Dark"*
+
+14. Set your Raspbian desktop background to the official 1920x1080p [Zeitgeist wallpaper](https://github.com/Chalta/Zeitgeist/blob/0.9/zeitgeist_wallpaper.png)!
 
 ## Software Details
 
