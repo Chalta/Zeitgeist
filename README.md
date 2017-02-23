@@ -6,6 +6,7 @@ From German Zeitgeist, Zeit ‘time’ + Geist ‘spirit.’
 
 [Planning Center LIVE](https://planning.center/2014/live-3/) on a lightweight Raspbian appliance. Scheduled delivery of web timers over HDMI in a low-cost, lightweight package using the Raspberry Pi 3 single-board computer.
 
+
 Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/master/LICENSE).
 
 ## Instructions:
