@@ -139,5 +139,5 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 * On a Mac, just type the following into Terminal: `vnc://192.168.X.YY` using the actual IP address of your RPi.
 
-* On Windows, install [RealVNC](https://www.realvnc.com/). Free for non-commercial use.
+* On Windows, install [RealVNC](https://www.realvnc.com/download/vnc/raspberrypi/). RealVNC is pre-licensed for Raspberry Pis and allows free cloud *and* direct connections for non-commercial users.
 
