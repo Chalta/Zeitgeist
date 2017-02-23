@@ -17,7 +17,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
   * The official case is very well-designed, and also available in black. 
   * Purchasing a Micro-SD card with NOOBS preinstalled will also make your life easier. 16GB is more than enough space.
   * You can use your own USB keyboard and USB mouse or purchase one.  You can [check here for compatibility.](http://elinux.org/RPi_USB_Keyboards). Wireless is nice, but once you have VNC/SSH and WiFi set up, you can remote into the Pi headlessly.
-  * You can Purchase an official PSU if you'd like. You can instead use a high-quality phone charger (minimum 2A) or USB port **at your own risk**, though this has worked well for many users.
+  * You can Purchase an official PSU if you'd like. Alternately, You can use a high-quality smartphone USB charger (minimum 2A) or another device's USB port **at your own risk**, though this has worked well for many users.
 
 2. [Install Raspbian directly or via NOOBS.](https://www.raspberrypi.org/documentation/installation/installing-images/)
 
