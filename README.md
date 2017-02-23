@@ -77,6 +77,9 @@ Notes:
 11. Configure watchdog daemon to automatically reboot the Pi if hung.  [[Ref]](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=147501)
 
   * `echo "dtparam=watchdog=on" | sudo tee -a /boot/config.txt`
+  * `sudo systemctl enable watchdog`
+  *  Reboot.
+  *  Confirm that watchdog is working via `sudo systemctl status watchdog` and/or via a fork bomb.
 
 
 ## Software Details
