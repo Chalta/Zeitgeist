@@ -103,7 +103,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
        ```
        
    * Reboot your Pi for the changes to take effect, then check that the watchdog is working: 
-   * `cat /var/log/syslog | grep watchdog`
+   * `cat /var/log/syslog | grep watchdog`  (search for, then display any lines in the syslog that feature the word "watchdog")
    * Ouput should look like:
      
        ```
