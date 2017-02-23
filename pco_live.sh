@@ -130,3 +130,6 @@ xdotool type 'https://services.planningcenteronline.com/service_types/'"$service
 xdotool key Return
 sleep 2s
 xdotool key F11
+
+#turn on the HDMI output, just in case it was off.
+@/home/pi/pri-hdmi.sh  on
