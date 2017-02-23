@@ -1,6 +1,6 @@
 # Zeitgeist
 
-### v0.9 Alpha Candidate
+### v0.9 Release Candidate
 
 From German Zeitgeist, Zeit ‘time’ + Geist ‘spirit.’
 
