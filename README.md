@@ -1,4 +1,4 @@
-![zeigeist logo](../blob/master/zeitgeist_wallpaper.png "Zeitgeist Logo")
+![zeigeist logo](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist_wallpaper.png "Zeitgeist Logo")
 
 
 
@@ -9,7 +9,7 @@ From German Zeitgeist, Zeit ‘time’ + Geist ‘spirit.’
 [Planning Center LIVE](https://planning.center/2014/live-3/) on a lightweight Raspbian appliance. Scheduled delivery of web timers over HDMI in a low-cost, lightweight package using the Raspberry Pi 3 single-board computer.
 
 
-Open-source and licensed under [GPLv3](../blob/master/LICENSE).
+Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/master/LICENSE).
 
 ## Instructions:
 
@@ -46,7 +46,7 @@ Open-source and licensed under [GPLv3](../blob/master/LICENSE).
 
         
 7.	Install needed software.  
-  *   Install the official packages. (See [below](../blob/master/README.md#software-details) for descriptions of each package)
+  *   Install the official packages. (See [below](https://github.com/Chalta/Zeitgeist/blob/master/README.md#software-details) for descriptions of each package)
   
       ```
       sudo apt-get install ttf-mscorefonts-installer x11-xserver-utils unclutter xdotool sed realvnc-vnc-server chromium-browser
@@ -65,28 +65,28 @@ Open-source and licensed under [GPLv3](../blob/master/LICENSE).
 9.	Configure start up behaviour using the *nano* command line text editor.
   *   `sudo nano ~/.config/lxsession/LXDE-pi/autostart`
   
-  * Append the lines found [here](../blob/master/autostart).
+  * Append the lines found [here](https://github.com/Chalta/Zeitgeist/blob/master/autostart).
   
   * Note: You can press SHIFT-INSERT or right click the terminal window and select "copy" to copy text on the clipboard to the document at the current cursor location. Press *Control-O* to save, and *Enter* to confirm.
   
   * Reboot.
 
 10.	Add shell functions. It's easiest to use the built-in LeafPad text editor for this step.
-  * Place [this file](../blob/master/rpi-hdmi.sh) in /home/pi/rpi-hdmi.sh
-  * Place [this file](../blob/master/pco_live.sh) in /home/pco_live.sh 
+  * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/rpi-hdmi.sh) in /home/pi/rpi-hdmi.sh
+  * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/pco_live.sh) in /home/pco_live.sh 
   * Then, make **both** files executable via chmod
        * `chmod +x /home/pi/rpi-hdmi.sh` and `chmod +x /home/pi/pco_live.sh` ) 
        *   **or** via the File Manager -> Properties -> Permissions menu and allow execution by owner.
 
 
 11.	Schedule PCO Live and HDMI service in crontab
- *   Update cron tab `crontab -e` with the cron entries in [this file](../blob/master/cron).
+ *   Update cron tab `crontab -e` with the cron entries in [this file](https://github.com/Chalta/Zeitgeist/blob/master/cron).
  *   Edit the crontab entries to match your own service times and service type IDs. Example entries are provided. There are many helpful websites for [designing](https://crontab.guru/) and [validating](http://cron.schlitt.info/) crontab schedules.
  *   Note: Only schedule the rpi-HDMI script if you wish to turn off the monitor at certain times of day.
 
 12. Activate the built-in systemd software/hardware watchdog to automatically reboot the Pi if hung.  [[Ref]](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=147501&p=972709#p972709)
 
-  *  [Uninstall the watchdog package if coming from versions prior to Zeitgeist 0.9.](../blob/0.9/patch.md)
+  *  [Uninstall the watchdog package if coming from versions prior to Zeitgeist 0.9.](https://github.com/Chalta/Zeitgeist/blob/0.9/patch.md)
   * `sudo nano /etc/systemd/system.conf`
   *  Uncomment and change these two lines from:
    
@@ -122,7 +122,7 @@ Open-source and licensed under [GPLv3](../blob/master/LICENSE).
          *  Set the timer to *"Countdown: End item on time"*  (This option dynamically adjusts the countdown to keep your service on track.)
          *  Set the colour theme to *"Dark"*
 
-14. Set your Raspbian desktop background to the official 1920x1080p [Zeitgeist wallpaper]../blob/master/zeitgeist_wallpaper.png)!
+14. Set your Raspbian desktop background to the official 1920x1080p [Zeitgeist wallpaper](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist_wallpaper.png)!
 
 ## Software Details
 
