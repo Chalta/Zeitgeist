@@ -32,6 +32,6 @@ xdotool type "$username"
 xdotool key Tab                                           #tab into password field
 #enter password
 xdotool type "$password"   
-xdotool key Return                                       #submit login information
+xdotool key Return                                        #submit login information
 xdotool key F11 
 fi
