@@ -97,6 +97,8 @@ DISPLAY=:0
 #returns the first line (head- 1) in a search for the window ID of the Chromium browser.
 WID=$(xdotool search --onlyvisible --class chromium|head -1)
 
+
+
 if [ -z ${WID} ] 			#Chromium is not open. 
 then echo "Chromium is not open! Opening Chromium."	#let the user know what happened.
 
@@ -105,17 +107,22 @@ then echo "Chromium is not open! Opening Chromium."	#let the user know what happ
 #This is suuuper kludgy as we're essentially editing a log file with a search and replace function in a stream editor.
 #However, it seems that Chromium has removed any other way to do it with startup CLI flags.
 #Note: The --incognito startup flag is common for web kiosks, but that won't preserve the cookies that keep us logged in to PCO.
+
 sed -i 's/Crashed/normal/g' "/home/pi/.config/chromium/Profile 1/Preferences"    #Opens the preferences file and replaces the last session "Crashed" status, with "normal" status.          
 
 #give the above script a little bit of time to execute.
 sleep 3s 
 
 #start Chromium and load the correct web address in fullscreen mode
-chromium-browser --start-fullscreen --disable-infobars https://services.planningcenteronline.com/service_types/"$servicetype"/plans/after/today/live
+chromium-browser --start-fullscreen --disable-infobars https://services.planningcenteronline.com/service_types/"$servicetype"/plans/after/today/live > /dev/null 2>&1 &
 
 #give the browser some time to open before moving on to the next step
 sleep 4s
+
+#Since Chromium is open now, get the window ID
+WID=$(xdotool search --onlyvisible --class chromium|head -1)
 fi
+
 
 
 
@@ -131,5 +138,8 @@ xdotool key Return
 sleep 2s
 xdotool key F11
 
+
 #turn on the HDMI output, just in case it was off.
-@/home/pi/pri-hdmi.sh  on
+sudo /home/pi/rpi-hdmi.sh  on /dev/null 2>&1 &
+
+exit
