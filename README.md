@@ -106,9 +106,13 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
    * Ouput should look like:
      
        ```
-       bcm2835-wdt 20100000.watchdog: Broadcom BCM2835 watchdog timer
-       Hardware watchdog 'Broadcom BCM2835 Watchdog timer', version 0
-       raspi-server systemd[1]: Set hardware watchdog to 10s.
+       raspberrypi kernel: [    3.885798] bcm2835-wdt 3f100000.watchdog: Broadcom BCM2835 watchdog timer
+       raspberrypi systemd[1]: Hardware watchdog 'Broadcom BCM2835 Watchdog timer', version 0
+       raspberrypi systemd[1]: Set hardware watchdog to 10s.
+       raspberrypi CRON[482]: (pi) CMD (sudo /usr/sbin/service watchdog start)
+       raspberrypi systemd[1]: Starting LSB: Start watchdog keepalive daemon...
+       raspberrypi systemd[1]: Started LSB: Start watchdog keepalive daemon.
+
        ```
   * Your Pi will now automatically reboot if is hung or frozen for more than 10 seconds.  
      
