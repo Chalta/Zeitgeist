@@ -13,11 +13,6 @@
 #       Replace XXXXXXX with the service type ID of each service (can be found by clicking "permalink" in the "Share" menu when viewing a single service).
 #       See here for more on permalinks: https://planning.center/2015/arrangements-keys-permalinks-android/
 
-#--------------------------------------------
-# (Re)start chromium browser at boot
-#--------------------------------------------
-
-@reboot sudo /home/pi/pco_live.sh
 
 
 #--------------------------------------------
