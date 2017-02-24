@@ -19,7 +19,7 @@
 # Code
 #---------------------------------------
 
-defaultservice="57683"  			#set this to your default service type ID. This will be used if no service id was specified by cron.
+defaultservice="12345"  			#set this to your default service type ID. This will be used if no service id was specified by cron.
 
 
 
