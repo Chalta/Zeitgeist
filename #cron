@@ -22,10 +22,10 @@
 # Turn off the monitor, saving energy and hopefully extending the life of your monitor. The Raspberry Pi is still on and running however.
 
 # Turn HDMI Off (22:00/10:00pm)
-0 22 * * * /home/pi/rpi-hdmi.sh off
+0 22 * * * sudo /home/pi/rpi-hdmi.sh off
 
 # Turn HDMI On (7:00/7:00am)
-0 7 * * * /home/pi/rpi-hdmi.sh on
+0 7 * * * sudo /home/pi/rpi-hdmi.sh on
 
 
 #--------------------------------------------
