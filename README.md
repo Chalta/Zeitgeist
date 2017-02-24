@@ -90,7 +90,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
   *  Uncomment and change these two lines from:
    
      ```shell
-     #RuntimeWatchdogSec=20
+     #RuntimeWatchdogSec=0
      #ShutdownWatchdogSec=10min
      ```
 
