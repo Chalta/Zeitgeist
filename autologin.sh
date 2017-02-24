@@ -18,7 +18,7 @@ xdotool key ctrl+l                                        #open address bar
 sleep 1s
 xclip -selection clipboard                                #copy the current address bar contents (URL) to xclip
 echo -n xclip                                             #output the contents of xclip to terminal for error-checking purposes
-xclip -out | grep 'https://accounts.planningcenteronline.com/login'     #are we on the login page?
+xclip -out -selection clipboard   | grep 'https://accounts.planningcenteronline.com/login'     #are we on the login page?
 
 #if we aren't logged in...
 
