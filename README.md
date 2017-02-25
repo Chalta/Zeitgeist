@@ -117,15 +117,27 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
   * Your Pi will now automatically reboot if is hung or frozen for more than 10 seconds.  
      
 
+13. Set up automatic login to Planning Center Online. Planning Center Online session cookies will eventually expire and you will be logged out. You can manually re-login when this happens (via VNC or a keyboard). But there are better, maintenance-free methods. The Lastpass extension for Chromium is free and can automatically log in to sites in a very secure manner.
+   * It is **strongly** recommended that you use or create a special-purpose Planning Center user with the minimum-required permissions (viewer) for each service type. Do *not* use an "admin" level user. If you want to use this user for other applications such as ProPresenter integration, or a Producer's iPad, "Editor" permissions are sufficient.
+   * Install the Lastpass extension from the Chromium web store.
+   * Create a dedicated LastPass account. (It will only have the credentials of your generic limited-permissions PCO user.)
+   * Login to the extension with your new LastPass account. Check off both "Remember User" and "Remember Password"
+   * Visit the login page for PCO and login to you generic limited-permissions user. Save these credentials to Lastpass when prompted.
+   * Then in the extension's *Preferences* menu, ensure both auto-logout options are unchecked. Check off "Automatically Fill Login Information"
+   * In the extension's *Sites* menu, select the Planning Center Online entry you just saved, and edit it. Under "Advanced Options" for the site, enable "Auto-Login".
+   * Click on *My Vault* in the extension's menu. Then access "Account Settings". Click "Show Advanced Settings", nnd in the "Re-prompt for Master Password" section, check off "Access a Site's Password".
+   * Voila! We've now securely stored the password for your minimum permissions PCO user. Chromium on the Raspberry Pi will automatically login to this site without exposing the password.
+
 13. Log in to Planning Center Online.
-   * It is **strongly** recommended that you use a dedicated user with the minimum-required permissions (viewer) for each service type. Do not log in with an admin-level user.
+
    * Configure the timers to suit your requirements. as a recommended starting point:
    
          *  Set the layout to *"Countdown: Full"*
          *  Set the timer to *"Countdown: End item on time"*  (This option dynamically adjusts the countdown to keep your service on track.)
          *  Set the colour theme to *"Dark"*
 
-14. Set your Raspbian desktop background to the official 1920x1080p [Zeitgeist wallpaper](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist_wallpaper.png)!
+
+15. Set your Raspbian desktop background to the official 1920x1080p [Zeitgeist wallpaper](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist_wallpaper.png)!
 
 ## Software Details
 
