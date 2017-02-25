@@ -118,15 +118,16 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
      
 
 13. Set up automatic login to Planning Center Online. Planning Center Online session cookies will eventually expire and you will be logged out. You can manually re-login when this happens (via VNC or a keyboard). But there are better, maintenance-free methods. The Lastpass extension for Chromium is free and can automatically log in to sites in a very secure manner.
-   * It is **strongly** recommended that you use or create a special-purpose Planning Center user with the minimum-required permissions (viewer) for each service type. Do *not* use an "admin" level user. If you want to use this user for other applications such as ProPresenter integration, or a Producer's iPad, "Editor" permissions are sufficient.
+   * It is **strongly** recommended that you use or create a special-purpose Planning Center user with the minimum-required permissions (viewer) for each service type. Do *not* use an "admin" level user. If you want to use this user for other applications such as ProPresenter integration or a Producer's iPad, "Editor" permissions are sufficient. This user will always be logged in on the Pi, so we want to limit the damage that could be done by anyone who accesses it and plugs in a keyboard.
    * Install the Lastpass extension from the Chromium web store.
-   * Create a dedicated LastPass account. (It will only have the credentials of your generic limited-permissions PCO user.)
+   * Create a dedicated LastPass account. (We will only add the credentials of your generic limited-permissions PCO user.)
    * Login to the extension with your new LastPass account. Check off both "Remember User" and "Remember Password"
    * Visit the login page for PCO and login to you generic limited-permissions user. Save these credentials to Lastpass when prompted.
    * Then in the extension's *Preferences* menu, ensure both auto-logout options are unchecked. Check off "Automatically Fill Login Information"
    * In the extension's *Sites* menu, select the Planning Center Online entry you just saved, and edit it. Under "Advanced Options" for the site, enable "Auto-Login".
-   * Click on *My Vault* in the extension's menu. Then access "Account Settings". Click "Show Advanced Settings", nnd in the "Re-prompt for Master Password" section, check off "Access a Site's Password".
+   * Click on *My Vault* in the extension's menu. Then access "Account Settings". Click "Show Advanced Settings", and in the "Re-prompt for Master Password" section, check off "Access a Site's Password".
    * Voila! We've now securely stored the password for your minimum permissions PCO user. Chromium on the Raspberry Pi will automatically login to this site without exposing the password.
+   * If you already use LastPass personally or professionally, you could get fancy with [securely sharing passwords](https://blog.lastpass.com/2016/01/tips-for-securely-sharing-passwords.html/), but we'll leave that to the power users.
 
 13. Log in to Planning Center Online.
 
