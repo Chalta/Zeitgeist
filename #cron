@@ -1,3 +1,18 @@
+#---------------------------------------
+# Description
+#---------------------------------------
+
+# 
+#---------------------------------------
+# Instructions
+#---------------------------------------
+
+# open up crontab with following command: crontab -e
+# Add the lines below and edit them for your application.
+#       Edit cron timings - validate your expressions here: https://crontab.guru
+#       Replace XXXXXXX with the service type ID of each service (can be found by clicking "permalink" in the "Share" menu when viewing a single service).
+#       See here for more on permalinks: https://planning.center/2015/arrangements-keys-permalinks-android/
+
 
 #--------------------------------------------
 # Daily Reboot - just in case someting gets out of sync (esp. browser fullscreen state)
