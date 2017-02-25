@@ -76,7 +76,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 
 11.	Schedule PCO Live and HDMI service in crontab
- *   Update cron tab `sudo crontab -e` with the cron entries in [this file](https://github.com/Chalta/Zeitgeist/blob/master/%23cron).
+ *   Update cron tab `crontab -e` with the cron entries in [this file](https://github.com/Chalta/Zeitgeist/blob/master/%23cron).
  *   Edit the crontab entries to match your own service times and service type IDs. Example entries are provided. There are many helpful websites for [designing](https://crontab.guru/) and [validating](http://cron.schlitt.info/) crontab schedules.
  *   Note: Only schedule the rpi-HDMI script if you wish to turn off the monitor at certain times of day.
 
