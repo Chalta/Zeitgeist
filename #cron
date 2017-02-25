@@ -18,7 +18,7 @@
 # Daily Reboot - just in case someting gets out of sync (esp. browser fullscreen state)
 #--------------------------------------------
 
-0       7      *        *      *      shutdown -r now                                                                                                                   Modified  
+0       7      *        *      *      sudo shutdown -r now                                                                                                                   Modified  
 
 #--------------------------------------------
 # rpi-hdmi.sh
