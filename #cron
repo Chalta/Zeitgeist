@@ -18,7 +18,7 @@
 # Daily Reboot - just in case someting gets out of sync (esp. browser fullscreen state)
 #--------------------------------------------
 
-0 7 * * * shutdown -r now
+0 7 * * * shutdown -r now                                                                                                                   Modified  
 
 #--------------------------------------------
 # rpi-hdmi.sh
@@ -27,30 +27,31 @@
 # Turn off the monitor, saving energy and hopefully extending the life of your monitor. The Raspberry Pi is still on and running however.
 
 # Turn HDMI Off (22:00/10:00pm)
-10 22 * * * sudo /home/pi/rpi-hdmi.sh off
+10      22      *       *       *       sudo /home/pi/rpi-hdmi.sh off
+0       8       *       *       0       sudo /home/pi/rpi-hdmi.sh off
+
 
 # Turn HDMI On (7:00/7:00am)
-#0 7 * * * sudo /home/pi/rpi-hdmi.sh on    #this is technically unnecessary as the daily reboot resets the HDMI interface.  It is left here as an example.
-
+0       7       *       *       *       sudo /home/pi/rpi-hdmi.sh on
 
 #--------------------------------------------
-# Weekly Sunday Services - Examples - Replace XXXXXXXXX with the appropriate service IDs from the PCO permalinks in the "share" menu for each service.
+# Weekly Sunday Services - Examples -Examples - Replace XXXXXXXXX with the appropriate service IDs from the PCO permalinks in the "share" menu for each service.
 #--------------------------------------------
 
 #09:00 Services
-0,10 8 * * 0 DISPLAY=:0 /home/pi/pco_live.sh XXXXXXXXX
+0,10    8       *       *       0       DISPLAY=:0 /home/pi/pco_live.sh XXXXXX
 
 #11:00 & 18:30 Services
-20,30 10 * * 0 DISPLAY=:0 /home/pi/pco_live.sh XXXXXXXXX
-20,30 15,17 * * 0 DISPLAY=:0 /home/pi/pco_live.sh XXXXXXXXX
+20,30   10      *       *       0       DISPLAY=:0 /home/pi/pco_live.sh XXXXXX
+20,30   15,17   *       *       0       DISPLAY=:0 /home/pi/pco_live.sh XXXXXX
 
 #--------------------------------------------
 # Special Services
 #--------------------------------------------
 
 # Christmas Eve – Every December 24
-0,20 13 24 12 * DISPLAY=:0 /home/pi/pco_live.sh XXXXXXXXX
+0,20    13      24      12      *       DISPLAY=:0 /home/pi/pco_live.sh XXXXXX
 
-# Good Friday – Run every Thursday/Friday in March/April – when ‘goodfriday’ argument is set, bash script will abort on any day that isn’t Good Friday or Maundy Thursday.
-0,20 1,9 * 3-4 4-5 DISPLAY=:0 /home/pi/pco_live.sh XXXXXXXXX goodfriday
+# Good Friday – Run every Thursday/Friday in March/April – when ‘goodfriday’ argument is set, bash script will abort on any day that isn’t between Maundy Thursday and Easter Sunday, inclusive.
+0,20    1,9     *       3-4     4-5     DISPLAY=:0 /home/pi/pco_live.sh XXXXXX goodfriday
 
