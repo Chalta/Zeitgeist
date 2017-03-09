@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # ----------------------------------------------------------------------------
-# A fork derived from the fork of pyglet's timer.py by Luke Macken
+# A fork of the fork of pyglet's timer.py by Luke Macken
 #
 # Copyright (c) 2006-2008 Alex Holkner
 # All rights reserved.
@@ -61,8 +61,8 @@ targetminutes =     int(sys.argv[2])
 class Timer(object):
     def __init__(self):
         self.start = ''
-        self.label = pyglet.text.Label(self.start, font_name='Arial', font_size=400,
-                                       x=window.width//2, y=window.height//2,
+        self.label = pyglet.text.Label(self.start, font_size=450,
+                                       x=window.width//2, y=(window.height//2)+100,
                                        anchor_x='center', anchor_y='center')
         self.reset()
 
@@ -105,7 +105,7 @@ def on_key_press(symbol, modifiers):
 
 @window.event
 def on_draw():
-    pyglet.gl.glClearColor(0.1,0.1,0.1,255)                    #background color
+    pyglet.gl.glClearColor(0.08,0.08,0.08,255)                    #background color
     window.clear()
     timer.label.draw()	
 
