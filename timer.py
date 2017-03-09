@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # ----------------------------------------------------------------------------
-# A fork of pyglet's timer.py by Luke Macken
+# A fork of the fork of pyglet's timer.py by Luke Macken
 #
 # Copyright (c) 2006-2008 Alex Holkner
 # All rights reserved.
@@ -34,50 +34,63 @@
 # POSSIBILITY OF SUCH DAMAGE.
 # ----------------------------------------------------------------------------
 
-'''A full-screen minute:second countdown timer.  Leave it in charge of your conference
-lighting talks.
-Once there is 5 minutes left, the timer goes red.  This limit is easily
-adjustable by hacking the source code.
-Press spacebar to start, stop and reset the timer.
+'''A full-screen hour:minute:second countdown timer.  
+
+Specify two arguments when calling the script: 
+
+e.g. timer.py [hours] [minutes]
+
+Hours must be specified in the 24-hour clock. (e.g. 10pm = 22)
+
+The script will then count down to that time on the current day. If that time is already past, it will count up in red.
 '''
 
 import sys
 import pyglet
-
+import datetime
+import time
+from datetime import timedelta
 
 window = pyglet.window.Window(fullscreen=True)
 
 
-COUNTDOWN = int(sys.argv[1])
-
+#parse the arguments
+targethour =        int(sys.argv[1])
+targetminutes =     int(sys.argv[2])
 
 class Timer(object):
     def __init__(self):
-        self.start = '%s:00' % COUNTDOWN
-        self.label = pyglet.text.Label(self.start, font_size=430,
+        self.start = ''
+        self.label = pyglet.text.Label(self.start, font_size=400,
                                        x=window.width//2, y=window.height//2,
                                        anchor_x='center', anchor_y='center')
         self.reset()
 
     def reset(self):
-        self.time = COUNTDOWN * 60
         self.running = False
         self.label.text = self.start
-        self.label.color = (240, 240, 240, 255) 	       #text color
+        self.label.color = (240, 240, 240, 255) 	   #text color - corresponds with "dark" theme on PCO Live
 
     def update(self, dt):
         if self.running:
-            self.time -= dt									#self.time = self.time - number of seconds defined by pyglet.clock.schedule_interval below
-            m, s = divmod(self.time, 60)					#divide self.time by 60. The quotient is minutes, the remainder is seconds.
-            self.label.text = '%02d:%02d' % (m, s)			#substitutes m and s into the provided format using the % string substitution character
-          #  if m < 0:
-            
-     
-          #      self.running = False		                #time's up.
-          #      self.label.color = (255, 94, 72, 255)		#the warning color		
-          #      self.label.text = 'OVER'
+            now = datetime.datetime.now()
+            target = datetime.datetime( now.year, now.month, now.day, targethour, targetminutes, 0) 
+            delta =   target - now
+            s = (delta.total_seconds())
+            sign = "-" if s < 0 else ""
+            s = abs(s)
+            hours, remainder = divmod(s, 3600)
+            minutes, seconds = divmod(remainder, 60)
+            hoursdisplay = '%d:' % hours if hours > 0 else ""
+            self.label.text = ((sign + hoursdisplay + '%02d:%02d' % (minutes, seconds)))
 
-#have spacebar stop and start the timer, and "Esc"	exit		
+            if sign == "-":                                 #if timedelta is negative
+
+                #self.running = False		            #time's up.
+                self.label.color = (255, 94, 72, 255)	    #the over time color - corresponds with "dark" theme on PCO Live
+                #self.label.text = 'OVER'                   #instead of counting up, it is possible to display a message instead
+
+#have spacebar pause and unpause the timer, and "Esc" exits
 				
 @window.event
 def on_key_press(symbol, modifiers):
@@ -92,12 +105,12 @@ def on_key_press(symbol, modifiers):
 
 @window.event
 def on_draw():
-    pyglet.gl.glClearColor(0.1,0.1,0.1,255)				#background color
+    pyglet.gl.glClearColor(0.1,0.1,0.1,255)			#background color
     window.clear()
     timer.label.draw()	
 
 
 timer = Timer()
-timer.running = True										#default to timer running	
+timer.running = True						#default to timer running at startup
 pyglet.clock.schedule_interval(timer.update, 1)
 pyglet.app.run()
