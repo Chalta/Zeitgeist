@@ -60,6 +60,15 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
       ```
   *  When this is complete, let's clean up the temporary files from the previous steps: `sudo apt-get clean`
   *  Reboot, then enable the VNC service as you did with SSH earlier in Step 4 of these instructions. [Official Documentation](https://www.raspberrypi.org/documentation/remote-access/vnc/)
+ 
+8.	Install *pyglet* python module.   
+  *   For our timer.py application, we have a single module dependency - [pyglet](https://bitbucket.org/pyglet/pyglet/wiki/Home) a windowing and media library which we use to display the timer. The rest of the required modules are included in default python installs. Python packages are best installed with ```pip``` which we installed in the step above. Install pyglet as below:
+  
+      ```
+      sudo pip3 install pyglet`
+      ```
+      
+  *   (Note that we are using pip**3** to install Python 3 modules. Python 2 will shortly be ending active development and entering an extended maintenance-only phase.))
 
 ##Customizing
 
