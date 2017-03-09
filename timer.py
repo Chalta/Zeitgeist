@@ -61,7 +61,7 @@ targetminutes =     int(sys.argv[2])
 class Timer(object):
     def __init__(self):
         self.start = ''
-        self.label = pyglet.text.Label(self.start, font_size=400,
+        self.label = pyglet.text.Label(self.start, font_name='Arial', font_size=400,
                                        x=window.width//2, y=window.height//2,
                                        anchor_x='center', anchor_y='center')
         self.reset()
@@ -69,7 +69,7 @@ class Timer(object):
     def reset(self):
         self.running = False
         self.label.text = self.start
-        self.label.color = (240, 240, 240, 255) 	   #text color - corresponds with "dark" theme on PCO Live
+        self.label.color = (240, 240, 240, 255)             #text color - corresponds with "dark" theme on PCO Live
 
     def update(self, dt):
         if self.running:
@@ -86,12 +86,12 @@ class Timer(object):
 
             if sign == "-":                                 #if timedelta is negative
 
-                #self.running = False		            #time's up.
+                #self.running = False                       #time's up.
                 self.label.color = (255, 94, 72, 255)	    #the over time color - corresponds with "dark" theme on PCO Live
                 #self.label.text = 'OVER'                   #instead of counting up, it is possible to display a message instead
 
 #have spacebar pause and unpause the timer, and "Esc" exits
-				
+
 @window.event
 def on_key_press(symbol, modifiers):
     if symbol == pyglet.window.key.SPACE:
@@ -105,12 +105,12 @@ def on_key_press(symbol, modifiers):
 
 @window.event
 def on_draw():
-    pyglet.gl.glClearColor(0.1,0.1,0.1,255)			#background color
+    pyglet.gl.glClearColor(0.1,0.1,0.1,255)                    #background color
     window.clear()
     timer.label.draw()	
 
 
 timer = Timer()
-timer.running = True						#default to timer running at startup
+timer.running = True                                           #default to timer running at startup
 pyglet.clock.schedule_interval(timer.update, 1)
 pyglet.app.run()
