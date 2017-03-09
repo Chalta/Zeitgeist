@@ -2,10 +2,18 @@
 
 From German Zeitgeist, Zeit ‘time’ + Geist ‘spirit.’
 
-[Planning Center LIVE](https://planning.center/2014/live-3/) on a lightweight Raspbian appliance. Scheduled delivery of web timers over HDMI in a low-cost, lightweight package using the Raspberry Pi 3 single-board computer.
+Scheduled delivery of service timers over HDMI in a low-cost, lightweight package using the Raspberry Pi 3 single-board computer. Supports both real-time [Planning Center LIVE](https://planning.center/2014/live-3/) timer and an offline generic countdown timer.
 
+## Features
+
+|  pco-live.sh |  timer.py    | rpi-hdmi.sh    |
+|----------|-------------|--------------|
+| Delivery of PCO LIVE timers via Chromium web browser.        |    Generic timer that counts down to a specific time, then counts up.        |  Utility to turn the display and an off.    |
 
 Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/master/LICENSE).
+
+
+----------------------------------
 
 # Instructions:
 
@@ -20,7 +28,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
   * You can use your own USB keyboard and USB mouse or purchase one.  You can [check here for compatibility.](http://elinux.org/RPi_USB_Keyboards). Wireless is nice, but once you have VNC/SSH and WiFi set up, you can remote into the Pi headlessly.
   * You can Purchase an official PSU if you'd like. Alternately, You can use a high-quality smartphone USB charger (minimum 2A) or another device's USB port **at your own risk**, though this has worked well for many users.
 
-2. [Install Raspbian directly or via NOOBS.](https://www.raspberrypi.org/documentation/installation/installing-images/)
+2. [Install Raspbian **Jessie** directly or via NOOBS.](https://www.raspberrypi.org/documentation/installation/installing-images/)
 
 3. Change the password for the default "Pi" user. [(Official Documentation)](https://www.raspberrypi.org/documentation/linux/usage/users.md)
   *  `passwd`
