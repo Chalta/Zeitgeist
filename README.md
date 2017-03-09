@@ -9,7 +9,7 @@ Scheduled delivery of service timers over HDMI in a low-cost, lightweight packag
 |  pco-live.sh |  timer.py    | rpi-hdmi.sh    |
 |----------|-------------|--------------|
 | ![PCO Live Timer](https://cloud.githubusercontent.com/assets/20143904/23775856/05407dda-04e8-11e7-9b2c-3d674c2f1a30.png) | | |
-| Delivery of real-time, interactive PCO LIVE timers via Chromium web browser.   |    Generic timer that counts down to a specific time, then counts up. Requires no Planning Center subscription, operator or internet connection.       |  Utility to turn the Raspberry PI HDMI service on and an off.    |
+| Delivery of real-time, interactive PCO LIVE timers via Chromium web browser. Requires a remote operator to at minimum start and end the service (for example, via a smartphone or tablet.). Optionally, the operator may advance through the service items and provide oer-item countdowns.  |    Generic timer that counts down to a specific time, then counts up. Requires no Planning Center subscription, operator or internet connection.       |  Utility to turn the Raspberry PI HDMI service on and an off.    |
 
 Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/master/LICENSE).
 
