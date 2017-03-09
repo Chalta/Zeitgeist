@@ -1,11 +1,10 @@
 #!/usr/bin/env python
-# ----------------------------------------------------------------------------
-#
+# 
 #---------------------------------------
 # Description
 #---------------------------------------
 #
-# A fork of Luke Macken's fork of Alex Holkner's pyglet timer.py
+# A fork pyglet timer.py. Thanks to  Luke Macken and Alex Holkner.
 #
 # A full-screen hour:minute:second countdown timer.  
 #
@@ -67,7 +66,7 @@
 # LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
 # ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
-# ----------------------------------------------------------------------------
+#---------------------------------------
 
 
 
