@@ -13,7 +13,9 @@
 #       Edit cron timings - validate your expressions here: https://crontab.guru
 #       Replace XXXXXXX with the service type ID of each service (can be found by clicking "permalink" in the "Share" menu when viewing a single service).
 #       See here for more on permalinks: https://planning.center/2015/arrangements-keys-permalinks-android/
-
+#
+#       To run an offline python timer instead of PCO Live, enter the stop time in hours [XX] and minutes [YY]. 
+#       Use the 24-hour clock. (e.g. 10:15 pm = 22 15)
 
 #--------------------------------------------
 # Daily Reboot - just in case someting gets out of sync (esp. browser fullscreen state)
@@ -36,9 +38,7 @@
 0       7       *       *       *       sudo /home/pi/rpi-hdmi.sh on
 
 #--------------------------------------------
-# Weekly Sunday Services - Examples - 
-To run real-time PCO Live timers, replace XXXXXXXXX with the appropriate service IDs from the PCO permalinks in the "share" menu for each service.
-To run an offline python timer instead, enter the stop time in hours [XX] and minutes [YY]. Use the 24-hour clock. (e.g. 10:15 pm = 22 15)
+# Weekly Sunday Services - Examples 
 #--------------------------------------------
 
 #09:00 Services
