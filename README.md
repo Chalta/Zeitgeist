@@ -8,7 +8,7 @@ Scheduled delivery of service timers over HDMI in a low-cost, lightweight packag
 
 |  pco-live.sh |  timer.py    | rpi-hdmi.sh    |
 |----------|-------------|--------------|
-| Delivery of PCO LIVE timers via Chromium web browser.        |    Generic timer that counts down to a specific time, then counts up.        |  Utility to turn the display and an off.    |
+| Delivery of PCO LIVE timers via Chromium web browser.        |    Generic timer that counts down to a specific time, then counts up.        |  Utility to turn the HDMI service on and an off.    |
 
 Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/master/LICENSE).
 
