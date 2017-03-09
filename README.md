@@ -100,7 +100,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/rpi-hdmi.sh) in /home/pi/rpi-hdmi.sh
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/pco-live.sh) in /home/pco-live.sh 
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/timer.py) in /home/timer.py
-  * Then, make all of the files executable via chmod **or** via the File Manager -> Properties -> Permissions menu and allow execution by owner.
+  * Then, make all of the files executable via chmod (**or** via File Manager -> Properties -> Permissions menu and allow execution by owner.)
        * `chmod +x /home/pi/rpi-hdmi.sh`
        * `chmod +x /home/pi/pco-live.sh`
 
