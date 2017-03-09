@@ -105,8 +105,9 @@ fi
 
 
 
-
-
+#hit escape twice in case a python timer is open.
+xdotool key Escape
+xdotool key Escape
 
 #Operate on the first display on the local machine
 DISPLAY=:0
