@@ -23,15 +23,15 @@
 #
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+#
 #---------------------------------------
 # Instructions
 #---------------------------------------
-
+#
 #Instructions: Put this script in /home/pi/PCOlive.sh
 #Then, make it executable: chmod +x /home/pi/rpi-hdmi.sh
 #Then update cron tab with the optional cron entries in this repository: https://github.com/Chalta/Zeitgeist/blob/master/cron
-
+#
 #---------------------------------------
 # Code
 #---------------------------------------
