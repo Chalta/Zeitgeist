@@ -1,4 +1,4 @@
-![zeigeist logo](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist_wallpaper.png "Zeitgeist Logo")
+![zeigeist logo](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist-wallpaper.png "Zeitgeist Logo")
 
 From German Zeitgeist, Zeit ‘time’ + Geist ‘spirit.’
 
@@ -170,8 +170,8 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
    *  Set the colour theme to *"Dark"*
 
 
-15. Set your Raspbian desktop background to the official 1920x1080p [Zeitgeist wallpaper](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist_wallpaper.png)!
-   *  `wget https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist_wallpaper.png -P /home/pi/`
+15. Set your Raspbian desktop background to the official 1920x1080p [Zeitgeist wallpaper](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist-wallpaper.png)!
+   *  `wget https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist-wallpaper.png -P /home/pi/`
    *  `sudo update-alternatives --config desktop-background`
 
 
