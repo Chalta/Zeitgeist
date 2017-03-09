@@ -1,6 +1,41 @@
 #!/usr/bin/env python
 # ----------------------------------------------------------------------------
-# A fork of the fork of pyglet's timer.py by Luke Macken
+#
+#---------------------------------------
+# Description
+#---------------------------------------
+#
+# A fork of Luke Macken's fork of Alex Holkner's pyglet timer.py
+#
+# A full-screen hour:minute:second countdown timer.  
+#
+# Specify two arguments when calling the script: 
+#    e.g. timer.py [hours] [minutes]
+#    Hours must be specified in the 24-hour clock. (e.g. 10pm = 22)
+#
+#The script will then count down to that time on the current day. If that time is already past, it will count up in red.
+#
+#---------------------------------------
+# License
+#---------------------------------------
+#
+#This program is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#
+#You should have received a copy of the GNU General Public License
+#along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#---------------------------------------
+# Original License
+#---------------------------------------
+#
 #
 # Copyright (c) 2006-2008 Alex Holkner
 # All rights reserved.
@@ -34,16 +69,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 # ----------------------------------------------------------------------------
 
-'''A full-screen hour:minute:second countdown timer.  
 
-Specify two arguments when calling the script: 
-
-e.g. timer.py [hours] [minutes]
-
-Hours must be specified in the 24-hour clock. (e.g. 10pm = 22)
-
-The script will then count down to that time on the current day. If that time is already past, it will count up in red.
-'''
 
 import sys
 import pyglet
