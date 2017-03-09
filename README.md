@@ -21,7 +21,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 ----------------------------------
 
-##Comissioning
+##Comissioning your Pi
 
 1. Purchase a Raspberry Pi 3, Case, HDMI cable, USB Micro charging cable and Micro SD Card.
   * The official case is very well-designed, and also available in black. 
@@ -69,7 +69,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
       sudo pip3 install pyglet`
       ```
       
-  *   (Note that we are using pip**3** to install Python 3 modules. Python 2 will shortly be ending active development and entering an extended maintenance-only phase.))
+  *   (Note that we are using pip**3** to install Python 3 modules. Python 2 is ending active development and entering an extended maintenance-only phase.)
 
 ----------------------------------
 
