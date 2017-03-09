@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # ----------------------------------------------------------------------------
-# A fork of the fork of pyglet's timer.py by Luke Macken
+# A fork derived from the fork of pyglet's timer.py by Luke Macken
 #
 # Copyright (c) 2006-2008 Alex Holkner
 # All rights reserved.
