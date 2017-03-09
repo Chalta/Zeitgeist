@@ -72,7 +72,9 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
   
   * Reboot.
 
-10.	Add shell functions. It's easiest to use the built-in LeafPad text editor for this step.
+##Adding and Scheduling Timers
+
+10.	Add shell functions to your /home/ folder. It's easiest to use the built-in LeafPad text editor for this step.
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/rpi-hdmi.sh) in /home/pi/rpi-hdmi.sh
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/pco_live.sh) in /home/pco_live.sh 
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/timer.py) in /home/timer.py
@@ -125,23 +127,21 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
    * It is **strongly** recommended that you use or create a special-purpose Planning Center user with the minimum-required permissions (viewer) for each service type. Do *not* use an "admin" level user. If you want to use this user for other applications such as ProPresenter integration or a Producer's iPad, "Editor" permissions are sufficient. This user will always be logged in on the Pi, so we want to limit the damage that could be done by anyone who accesses it and plugs in a keyboard.
    * Install the Lastpass extension from the Chromium web store.
    * Create a dedicated LastPass account. (We will only add the credentials of your generic limited-permissions PCO user.)
-   * Login to the extension with your new LastPass account. Check off both "Remember User" and "Remember Password"
+   * Login to the extension with your new LastPass account. **Check** both *"Remember User"* and *"Remember Password"*.
    * Visit the login page for PCO and login to you generic limited-permissions user. Save these credentials to Lastpass when prompted.
-   * Then in the extension's *Preferences* menu, ensure both auto-logout options are unchecked. Check off "Automatically Fill Login Information"
-   * In the extension's *Sites* menu, select the Planning Center Online entry you just saved, and edit it. Under "Advanced Options" for the site, enable "Auto-Login".
-   * Click on *My Vault* in the extension's menu. Then access "Account Settings". Click "Show Advanced Settings", and in the "Re-prompt for Master Password" section, check off "Access a Site's Password".
-   * Voila! We've now securely stored the password for your minimum permissions PCO user. Chromium on the Raspberry Pi will automatically login to this site without exposing the password.
+   * Then in the extension's *Preferences* menu, ensure both auto-logout options are **un**checked. Then **check** *"Automatically Fill Login Information"*
+   * In the extension's *Sites* menu, select the Planning Center Online entry you just saved, and edit it. Under *"Advanced Options"* for the site, enable "Auto-Login".
+   * Click on *My Vault* in the extension's menu. Then access *"Account Settings"*. Click *"Show Advanced Settings"*, and in the *"Re-prompt for Master Password"* section, **check** *"Access a Site's Password"*.
+   * Voila! We've now securely stored the password for your minimum permissions PCO user. You will be required to login to view the PCO password, but the extension will enter it for you automatically with no manual intervention.
    * If you already use LastPass personally or professionally, you could get fancy with [securely sharing passwords](https://blog.lastpass.com/2016/01/tips-for-securely-sharing-passwords.html/), but we'll leave that to the power users.
 
 ##Final Steps
 
-13. Log in to Planning Center Online and enter live mode for a service.
-
-   * Configure the timers to suit your requirements. As a recommended starting point:
+13. Run pco_live.sh and configure the timers to suit your requirements. As a recommended starting point:
    
-         *  Set the layout to *"Countdown: Full"*
-         *  Set the timer to *"Countdown: End item on time"*  (This option dynamically adjusts the countdown to keep your service on track.)
-         *  Set the colour theme to *"Dark"*
+   *  Set the layout to *"Countdown: Full"*
+   *  Set the timer to *"Countdown: End item on time"*  (This option dynamically adjusts the countdown to keep your service on track, but requires an operator to follow along advance through the service items during the service. The smartphone app is free and very handy for this purpose)
+   *  Set the colour theme to *"Dark"*
 
 
 15. Set your Raspbian desktop background to the official 1920x1080p [Zeitgeist wallpaper](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist_wallpaper.png)!
