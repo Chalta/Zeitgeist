@@ -41,8 +41,8 @@
 # Weekly Sunday Services - Examples 
 #--------------------------------------------
 
-#09:00 Services
-0,10    8       *       *       0       DISPLAY=:0 /home/pi/timer.py XX YY
+#09:00 Services  - starting at 8:50 am on Sundays, starts a generic offline countdown to 10:05am.
+50    8       *       *       0       DISPLAY=:0 /home/pi/timer.py 10 05
 
 #11:00 & 18:30 Services
 20,30   10      *       *       0       DISPLAY=:0 /home/pi/pco-live.sh XXXXXX
