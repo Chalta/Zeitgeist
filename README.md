@@ -76,11 +76,11 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 10.	Add shell functions to your /home/ folder. It's easiest to use the built-in LeafPad text editor for this step.
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/rpi-hdmi.sh) in /home/pi/rpi-hdmi.sh
-  * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/pco_live.sh) in /home/pco_live.sh 
+  * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/pco-live.sh) in /home/pco-live.sh 
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/timer.py) in /home/timer.py
   * Then, make all of the files executable via chmod **or** via the File Manager -> Properties -> Permissions menu and allow execution by owner.
        * `chmod +x /home/pi/rpi-hdmi.sh`
-       * `chmod +x /home/pi/pco_live.sh`
+       * `chmod +x /home/pi/pco-live.sh`
 
 
 11.	Schedule PCO Live and HDMI service in crontab
@@ -137,7 +137,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 ##Final Steps
 
-13. Run pco_live.sh and configure the timers to suit your requirements. As a recommended starting point:
+13. Run pco-live.sh and configure the timers to suit your requirements. As a recommended starting point:
    
    *  Set the layout to *"Countdown: Full"*
    *  Set the timer to *"Countdown: End item on time"*  (This option dynamically adjusts the countdown to keep your service on track, but requires an operator to follow along advance through the service items during the service. The smartphone app is free and very handy for this purpose)
