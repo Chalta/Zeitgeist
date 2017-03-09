@@ -45,16 +45,16 @@
 0,10    8       *       *       0       DISPLAY=:0 /home/pi/timer.py XX YY
 
 #11:00 & 18:30 Services
-20,30   10      *       *       0       DISPLAY=:0 /home/pi/pco_live.sh XXXXXX
-#20,30   15,17   *       *       0       DISPLAY=:0 /home/pi/pco_live.sh XXXXXX
+20,30   10      *       *       0       DISPLAY=:0 /home/pi/pco-live.sh XXXXXX
+#20,30   15,17   *       *       0       DISPLAY=:0 /home/pi/pco-live.sh XXXXXX
 
 #--------------------------------------------
 # Special Services
 #--------------------------------------------
 
 # Christmas Eve – Every December 24
-0,20    13      24      12      *       DISPLAY=:0 /home/pi/pco_live.sh XXXXXX
+0,20    13      24      12      *       DISPLAY=:0 /home/pi/pco-live.sh XXXXXX
 
 # Good Friday – Run every Thursday/Friday in March/April – when ‘goodfriday’ argument is set, bash script will abort on any day that isn’t between Maundy Thursday and Easter Sunday, inclusive.
-0,20    1,9     *       3-4     4-5     DISPLAY=:0 /home/pi/pco_live.sh XXXXXX goodfriday
+0,20    1,9     *       3-4     4-5     DISPLAY=:0 /home/pi/pco-live.sh XXXXXX goodfriday
 
