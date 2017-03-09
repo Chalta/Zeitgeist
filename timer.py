@@ -4,7 +4,7 @@
 # Description
 #---------------------------------------
 #
-# A fork pyglet timer.py. Thanks to  Luke Macken and Alex Holkner.
+# A fork of pyglet's timer.py. Thanks to  Luke Macken and Alex Holkner.
 #
 # A full-screen hour:minute:second countdown timer.  
 #
