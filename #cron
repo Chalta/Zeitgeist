@@ -35,15 +35,17 @@
 0       7       *       *       *       sudo /home/pi/rpi-hdmi.sh on
 
 #--------------------------------------------
-# Weekly Sunday Services - Examples -Examples - Replace XXXXXXXXX with the appropriate service IDs from the PCO permalinks in the "share" menu for each service.
+# Weekly Sunday Services - Examples - 
+To run real-time PCO Live timers, replace XXXXXXXXX with the appropriate service IDs from the PCO permalinks in the "share" menu for each service.
+To run an offline python timer instead, enter the stop time in hours [XX] and minutes [YY]. Use the 24-hour clock. (e.g. 10:15 pm = 22 15)
 #--------------------------------------------
 
 #09:00 Services
-0,10    8       *       *       0       DISPLAY=:0 /home/pi/pco_live.sh XXXXXX
+0,10    8       *       *       0       DISPLAY=:0 /home/pi/timer.py XX YY
 
 #11:00 & 18:30 Services
 20,30   10      *       *       0       DISPLAY=:0 /home/pi/pco_live.sh XXXXXX
-20,30   15,17   *       *       0       DISPLAY=:0 /home/pi/pco_live.sh XXXXXX
+#20,30   15,17   *       *       0       DISPLAY=:0 /home/pi/pco_live.sh XXXXXX
 
 #--------------------------------------------
 # Special Services
