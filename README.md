@@ -19,6 +19,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 (Commands in `code blocks` are to be entered in the [terminal](https://www.raspberrypi.org/documentation/usage/terminal/).)
 
+----------------------------------
 
 ##Comissioning
 
@@ -70,6 +71,8 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
       
   *   (Note that we are using pip**3** to install Python 3 modules. Python 2 will shortly be ending active development and entering an extended maintenance-only phase.))
 
+----------------------------------
+
 ##Customizing
 
 8.	Configure sleep settings using the *nano* command line text editor.
@@ -89,6 +92,8 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
   
   * Reboot.
 
+----------------------------------
+
 ##Adding and Scheduling Timers
 
 10.	Add shell functions to your /home/ folder. It's easiest to use the built-in LeafPad text editor for this step.
@@ -104,6 +109,8 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
  *   Update cron tab `crontab -e` with the cron entries in [this file](https://github.com/Chalta/Zeitgeist/blob/master/%23cron).
  *   Edit the crontab entries to match your own service times and service type IDs. Example entries are provided. There are many helpful websites for [designing](https://crontab.guru/) and [validating](http://cron.schlitt.info/) crontab schedules.
  *   Note: Only schedule the rpi-HDMI script if you wish to turn off the monitor at certain times of day.
+
+----------------------------------
 
 ##Enhancing Reliability
 
@@ -152,6 +159,8 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
    * Voila! We've now securely stored the password for your minimum permissions PCO user. You will be required to login to view the PCO password, but the extension will enter it for you automatically with no manual intervention.
    * If you already use LastPass personally or professionally, you could get fancy with [securely sharing passwords](https://blog.lastpass.com/2016/01/tips-for-securely-sharing-passwords.html/), but we'll leave that to the power users.
 
+----------------------------------
+
 ##Final Steps
 
 13. Run pco-live.sh and configure the timers to suit your requirements. As a recommended starting point:
@@ -163,6 +172,20 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 15. Set your Raspbian desktop background to the official 1920x1080p [Zeitgeist wallpaper](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist_wallpaper.png)!
 
+
+
+
+
+
+
+
+
+
+----------------------------------
+
+##Additional Information
+
+----------------------------------
 
 ### Software Details
 
@@ -177,6 +200,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 |Sed | Stream editor for filtering and replacing text | [Manual Page](https://manpages.debian.org/jessie/sed/sed.1.en.html) |
 |python3-pip | Python 3 package installer. Installed by default in Raspbian Jessie (but not Raspbian Wheezy or Jessie Lite). We're installing it to make sure it's here. |   [Package Details](https://packages.debian.org/jessie/python/python3-pip) |
 
+----------------------------------
 
 ### Remotely Accessing your Pi
 
