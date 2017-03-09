@@ -198,7 +198,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 |xdotool	| Simulates keyboard/mouse input	| [Manual Page](https://manpages.debian.org/jessie/xdotool/xdotool.1.en.html) |
 |realvnc-vnc-server 	| Optional: Allows remote control and screensharing so you can control your RPi from another computer.	| [Manual Page](https://www.realvnc.com/docs/raspberry-pi.html#raspberry-pi-setup) |
 |Sed | Stream editor for filtering and replacing text | [Manual Page](https://manpages.debian.org/jessie/sed/sed.1.en.html) |
-|python3-pip | Python 3 package installer. Installed by default in Raspbian Jessie (but not Raspbian Wheezy or Jessie Lite). We're installing it to make sure it's here. |   [Package Details](https://packages.debian.org/jessie/python/python3-pip) |
+|python3-pip | Python 3 package installer. Installed by default in Raspbian Jessie (but not Raspbian Wheezy or Jessie Lite). We're (re)installing it to make sure it's here. |   [Package Details](https://packages.debian.org/jessie/python/python3-pip) |
 
 ----------------------------------
 
