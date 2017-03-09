@@ -7,9 +7,12 @@ From German Zeitgeist, Zeit ‘time’ + Geist ‘spirit.’
 
 Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/master/LICENSE).
 
-## Instructions:
+# Instructions:
 
 (Commands in `code blocks` are to be entered in the [terminal](https://www.raspberrypi.org/documentation/usage/terminal/).)
+
+
+##Comissioning
 
 1. Purchase a Raspberry Pi 3, Case, HDMI cable, USB Micro charging cable and Micro SD Card.
   * The official case is very well-designed, and also available in black. 
@@ -49,7 +52,9 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
       ```
   *  When this is complete, let's clean up the temporary files from the previous steps: `sudo apt-get clean`
   *  Reboot, then enable the VNC service as you did with SSH earlier in Step 4 of these instructions. [Official Documentation](https://www.raspberrypi.org/documentation/remote-access/vnc/)
-  
+
+##Customizing
+
 8.	Configure sleep settings using the *nano* command line text editor.
   *  `sudo nano /etc/lightdm/lightdm.conf`
   
@@ -70,7 +75,8 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 10.	Add shell functions. It's easiest to use the built-in LeafPad text editor for this step.
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/rpi-hdmi.sh) in /home/pi/rpi-hdmi.sh
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/pco_live.sh) in /home/pco_live.sh 
-  * Then, make **both** files executable via chmod **or** via the File Manager -> Properties -> Permissions menu and allow execution by owner.
+  * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/timer.py) in /home/timer.py
+  * Then, make all of the files executable via chmod **or** via the File Manager -> Properties -> Permissions menu and allow execution by owner.
        * `chmod +x /home/pi/rpi-hdmi.sh`
        * `chmod +x /home/pi/pco_live.sh`
 
@@ -79,6 +85,8 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
  *   Update cron tab `crontab -e` with the cron entries in [this file](https://github.com/Chalta/Zeitgeist/blob/master/%23cron).
  *   Edit the crontab entries to match your own service times and service type IDs. Example entries are provided. There are many helpful websites for [designing](https://crontab.guru/) and [validating](http://cron.schlitt.info/) crontab schedules.
  *   Note: Only schedule the rpi-HDMI script if you wish to turn off the monitor at certain times of day.
+
+##Enhancing Reliability
 
 12. Activate the built-in systemd software/hardware watchdog to automatically reboot the Pi if hung.  [[Ref]](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=147501&p=972709#p972709)
 
@@ -125,9 +133,11 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
    * Voila! We've now securely stored the password for your minimum permissions PCO user. Chromium on the Raspberry Pi will automatically login to this site without exposing the password.
    * If you already use LastPass personally or professionally, you could get fancy with [securely sharing passwords](https://blog.lastpass.com/2016/01/tips-for-securely-sharing-passwords.html/), but we'll leave that to the power users.
 
-13. Log in to Planning Center Online.
+##Final Steps
 
-   * Configure the timers to suit your requirements. as a recommended starting point:
+13. Log in to Planning Center Online and enter live mode for a service.
+
+   * Configure the timers to suit your requirements. As a recommended starting point:
    
          *  Set the layout to *"Countdown: Full"*
          *  Set the timer to *"Countdown: End item on time"*  (This option dynamically adjusts the countdown to keep your service on track.)
@@ -136,7 +146,8 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 15. Set your Raspbian desktop background to the official 1920x1080p [Zeitgeist wallpaper](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist_wallpaper.png)!
 
-## Software Details
+
+### Software Details
 
 | Software | Description | Reference   |
 |----------|-------------|--------------|
@@ -150,16 +161,16 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 |python3-pip | Python 3 package installer. Installed by default in Raspbian Jessie (but not Raspbian Wheezy or Jessie Lite). We're installing it to make sure it's here. |   [Package Details](https://packages.debian.org/jessie/python/python3-pip) |
 
 
-## Remotely Accessing your Pi
+### Remotely Accessing your Pi
 
-### SSH
+#### SSH
 
 * From a Mac just type the following into Terminal `ssh pi@192.168.X.YY`, using the actual IP address of your RPi.
 
 * On Windows, install [puTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/).
 
 
-### VNC 
+#### VNC 
 
 * On a Mac, just type the following into Terminal: `vnc://192.168.X.YY` using the actual IP address of your RPi.
 
