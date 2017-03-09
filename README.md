@@ -71,7 +71,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/rpi-hdmi.sh) in /home/pi/rpi-hdmi.sh
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/pco_live.sh) in /home/pco_live.sh 
   * Then, make **both** files executable via chmod
-       * `chmod +x /home/pi/rpi-hdmi.sh` and `chmod +x /home/pi/pco_live.sh` ) 
+       * `chmod +x /home/pi/rpi-hdmi.sh` and `chmod +x /home/pi/pco_live.sh`
        *   **or** via the File Manager -> Properties -> Permissions menu and allow execution by owner.
 
 
