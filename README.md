@@ -183,7 +183,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 ----------------------------------
 
-##Additional Information
+##Appendices
 
 ----------------------------------
 
