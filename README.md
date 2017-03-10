@@ -104,7 +104,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
   * Then, make all of the files executable via chmod (**or** via File Manager -> Properties -> Permissions menu and allow execution by owner.)
        * `chmod +x /home/pi/rpi-hdmi.sh`
        * `chmod +x /home/pi/pco-live.sh`
-
+       * `chmod +x /home/pi/timer.py`
 
 11.	Schedule PCO Live and HDMI service in crontab
  *   Update cron tab `crontab -e` with the cron entries in [this file](https://github.com/Chalta/Zeitgeist/blob/master/%23cron).
