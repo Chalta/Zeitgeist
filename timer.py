@@ -142,3 +142,4 @@ timer = Timer()
 timer.running = True                                           #default to timer running at startup
 pyglet.clock.schedule_interval(timer.update, 1)
 pyglet.app.run()
+
