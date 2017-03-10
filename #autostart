@@ -16,4 +16,4 @@
 @unclutter -idle 0.1 -root      #hide pointer when mouse idle for more than X seconds
 
 #start chromium with a special shell script
-@/home/pi/pco_live.sh
+@/home/pi/pco-live.sh
