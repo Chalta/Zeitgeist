@@ -1,6 +1,6 @@
 ![zeigeist logo](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist-wallpaper.png "Zeitgeist Logo")
 
-From German Zeitgeist, Zeit ‘time’ + Geist ‘spirit.’
+###*From German Zeitgeist, Zeit ‘time’ + Geist ‘spirit.’*
 
 Scheduled delivery of service timers over HDMI in a low-cost, lightweight package using the Raspberry Pi 3 single-board computer. Supports both real-time [Planning Center LIVE](https://planning.center/2014/live-3/) timer and an offline generic countdown timer.
 
