@@ -1,15 +1,28 @@
-![zeigeist logo](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist_wallpaper.png "Zeitgeist Logo")
+![zeigeist logo](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist-wallpaper.png "Zeitgeist Logo")
 
 From German Zeitgeist, Zeit ‘time’ + Geist ‘spirit.’
 
-[Planning Center LIVE](https://planning.center/2014/live-3/) on a lightweight Raspbian appliance. Scheduled delivery of web timers over HDMI in a low-cost, lightweight package using the Raspberry Pi 3 single-board computer.
+Scheduled delivery of service timers over HDMI in a low-cost, lightweight package using the Raspberry Pi 3 single-board computer. Supports both real-time [Planning Center LIVE](https://planning.center/2014/live-3/) timer and an offline generic countdown timer.
 
+## Features
+
+|  pco-live.sh |  timer.py    | rpi-hdmi.sh    |
+|:----------:|:-------------:|:--------------:|
+| ![zeigeist logo](https://cloud.githubusercontent.com/assets/20143904/23776197/00ec293a-04ea-11e7-9ccf-f12fd151157c.png "PCO Live Example") | ![zeigeist logo](https://cloud.githubusercontent.com/assets/20143904/23776197/00ec293a-04ea-11e7-9ccf-f12fd151157c.png "Python Timer Example") | |
+| Delivery of real-time, interactive PCO LIVE timers via Chromium web browser. |    Generic python timer that counts down to a specific time, then counts up.    |  Utility to turn the Raspberry PI HDMI service on and an off.    |
 
 Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/master/LICENSE).
 
-## Instructions:
+
+----------------------------------
+
+# Instructions:
 
 (Commands in `code blocks` are to be entered in the [terminal](https://www.raspberrypi.org/documentation/usage/terminal/).)
+
+----------------------------------
+
+##Comissioning your Pi
 
 1. Purchase a Raspberry Pi 3, Case, HDMI cable, USB Micro charging cable and Micro SD Card.
   * The official case is very well-designed, and also available in black. 
@@ -17,7 +30,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
   * You can use your own USB keyboard and USB mouse or purchase one.  You can [check here for compatibility.](http://elinux.org/RPi_USB_Keyboards). Wireless is nice, but once you have VNC/SSH and WiFi set up, you can remote into the Pi headlessly.
   * You can Purchase an official PSU if you'd like. Alternately, You can use a high-quality smartphone USB charger (minimum 2A) or another device's USB port **at your own risk**, though this has worked well for many users.
 
-2. [Install Raspbian directly or via NOOBS.](https://www.raspberrypi.org/documentation/installation/installing-images/)
+2. [Install Raspbian **Jessie** directly or via NOOBS.](https://www.raspberrypi.org/documentation/installation/installing-images/)
 
 3. Change the password for the default "Pi" user. [(Official Documentation)](https://www.raspberrypi.org/documentation/linux/usage/users.md)
   *  `passwd`
@@ -45,11 +58,24 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
   *   Install the official packages. (See [below](https://github.com/Chalta/Zeitgeist/blob/master/README.md#software-details) for descriptions of each package)
   
       ```
-      sudo apt-get install -y ttf-mscorefonts-installer x11-xserver-utils unclutter xdotool sed realvnc-vnc-server chromium-browser
+      sudo apt-get install -y ttf-mscorefonts-installer x11-xserver-utils unclutter xdotool sed realvnc-vnc-server chromium-browser python3-pip
       ```
   *  When this is complete, let's clean up the temporary files from the previous steps: `sudo apt-get clean`
   *  Reboot, then enable the VNC service as you did with SSH earlier in Step 4 of these instructions. [Official Documentation](https://www.raspberrypi.org/documentation/remote-access/vnc/)
+ 
+8.	Install *pyglet* python module.   
+  *   For our timer.py application, we have a single module dependency - [pyglet](https://bitbucket.org/pyglet/pyglet/wiki/Home) a windowing and media library which we use to display the timer. The rest of the required modules are included in default python installs. Python packages are best installed with ```pip``` which we installed in the step above. Install pyglet as below:
   
+      ```
+      sudo pip3 install pyglet`
+      ```
+      
+  *   (Note that we are using pip**3** to install Python 3 modules. Python 2 is ending active development and entering an extended maintenance-only phase.)
+
+----------------------------------
+
+##Customizing
+
 8.	Configure sleep settings using the *nano* command line text editor.
   *  `sudo nano /etc/lightdm/lightdm.conf`
   
@@ -67,18 +93,27 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
   
   * Reboot.
 
-10.	Add shell functions. It's easiest to use the built-in LeafPad text editor for this step.
-  * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/rpi-hdmi.sh) in /home/pi/rpi-hdmi.sh
-  * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/pco_live.sh) in /home/pco_live.sh 
-  * Then, make **both** files executable via chmod
-       * `chmod +x /home/pi/rpi-hdmi.sh` and `chmod +x /home/pi/pco_live.sh` ) 
-       *   **or** via the File Manager -> Properties -> Permissions menu and allow execution by owner.
+----------------------------------
 
+##Adding and Scheduling Timers
+
+10.	Add shell functions to your /home/ folder. It's easiest to use the built-in LeafPad text editor for this step.
+  * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/rpi-hdmi.sh) in /home/pi/rpi-hdmi.sh
+  * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/pco-live.sh) in /home/pco-live.sh 
+  * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/timer.py) in /home/timer.py
+  * Then, make all of the files executable via chmod (**or** via File Manager -> Properties -> Permissions menu and allow execution by owner.)
+       * `chmod +x /home/pi/rpi-hdmi.sh`
+       * `chmod +x /home/pi/pco-live.sh`
+       * `chmod +x /home/pi/timer.py`
 
 11.	Schedule PCO Live and HDMI service in crontab
  *   Update cron tab `crontab -e` with the cron entries in [this file](https://github.com/Chalta/Zeitgeist/blob/master/%23cron).
  *   Edit the crontab entries to match your own service times and service type IDs. Example entries are provided. There are many helpful websites for [designing](https://crontab.guru/) and [validating](http://cron.schlitt.info/) crontab schedules.
  *   Note: Only schedule the rpi-HDMI script if you wish to turn off the monitor at certain times of day.
+
+----------------------------------
+
+##Make it Bulletproof
 
 12. Activate the built-in systemd software/hardware watchdog to automatically reboot the Pi if hung.  [[Ref]](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=147501&p=972709#p972709)
 
@@ -117,26 +152,41 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
    * It is **strongly** recommended that you use or create a special-purpose Planning Center user with the minimum-required permissions (viewer) for each service type. Do *not* use an "admin" level user. If you want to use this user for other applications such as ProPresenter integration or a Producer's iPad, "Editor" permissions are sufficient. This user will always be logged in on the Pi, so we want to limit the damage that could be done by anyone who accesses it and plugs in a keyboard.
    * Install the Lastpass extension from the Chromium web store.
    * Create a dedicated LastPass account. (We will only add the credentials of your generic limited-permissions PCO user.)
-   * Login to the extension with your new LastPass account. Check off both "Remember User" and "Remember Password"
+   * Login to the extension with your new LastPass account. **Check** both *"Remember User"* and *"Remember Password"*.
    * Visit the login page for PCO and login to you generic limited-permissions user. Save these credentials to Lastpass when prompted.
-   * Then in the extension's *Preferences* menu, ensure both auto-logout options are unchecked. Check off "Automatically Fill Login Information"
-   * In the extension's *Sites* menu, select the Planning Center Online entry you just saved, and edit it. Under "Advanced Options" for the site, enable "Auto-Login".
-   * Click on *My Vault* in the extension's menu. Then access "Account Settings". Click "Show Advanced Settings", and in the "Re-prompt for Master Password" section, check off "Access a Site's Password".
-   * Voila! We've now securely stored the password for your minimum permissions PCO user. Chromium on the Raspberry Pi will automatically login to this site without exposing the password.
+   * Then in the extension's *Preferences* menu, ensure both auto-logout options are **un**checked. Then **check** *"Automatically Fill Login Information"*
+   * In the extension's *Sites* menu, select the Planning Center Online entry you just saved, and edit it. Under *"Advanced Options"* for the site, enable "Auto-Login".
+   * Click on *My Vault* in the extension's menu. Then access *"Account Settings"*. Click *"Show Advanced Settings"*, and in the *"Re-prompt for Master Password"* section, **check** *"Access a Site's Password"*.
+   * Voila! We've now securely stored the password for your minimum permissions PCO user. You will be required to login to view the PCO password, but the extension will enter it for you automatically with no manual intervention.
    * If you already use LastPass personally or professionally, you could get fancy with [securely sharing passwords](https://blog.lastpass.com/2016/01/tips-for-securely-sharing-passwords.html/), but we'll leave that to the power users.
 
-13. Log in to Planning Center Online.
+----------------------------------
 
-   * Configure the timers to suit your requirements. as a recommended starting point:
+##Final Steps
+
+13. Run pco-live.sh and configure the timers to suit your requirements. As a recommended starting point:
    
-         *  Set the layout to *"Countdown: Full"*
-         *  Set the timer to *"Countdown: End item on time"*  (This option dynamically adjusts the countdown to keep your service on track.)
-         *  Set the colour theme to *"Dark"*
+   *  Set the layout to *"Countdown: Full"*
+   *  Set the timer to *"Countdown: End item on time"*  (This option dynamically adjusts the countdown to keep your service on track, but requires an operator to follow along advance through the service items during the service. The smartphone app is free and very handy for this purpose)
+   *  Set the colour theme to *"Dark"*
 
 
-15. Set your Raspbian desktop background to the official 1920x1080p [Zeitgeist wallpaper](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist_wallpaper.png)!
+15. Set your Raspbian desktop background to the official 1920x1080p [Zeitgeist wallpaper](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist-wallpaper.png)!
+   *  `wget -N https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist-wallpaper.png -P /home/pi/`
+   *  `pcmanfm --desktop-pref`
 
-## Software Details
+
+
+
+
+
+----------------------------------
+
+##Appendices
+
+----------------------------------
+
+### Software Details
 
 | Software | Description | Reference   |
 |----------|-------------|--------------|
@@ -147,18 +197,20 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 |xdotool	| Simulates keyboard/mouse input	| [Manual Page](https://manpages.debian.org/jessie/xdotool/xdotool.1.en.html) |
 |realvnc-vnc-server 	| Optional: Allows remote control and screensharing so you can control your RPi from another computer.	| [Manual Page](https://www.realvnc.com/docs/raspberry-pi.html#raspberry-pi-setup) |
 |Sed | Stream editor for filtering and replacing text | [Manual Page](https://manpages.debian.org/jessie/sed/sed.1.en.html) |
+|python3-pip | Python 3 package installer. Installed by default in Raspbian Jessie (but not Raspbian Wheezy or Jessie Lite). We're (re)installing it to make sure it's here. |   [Package Details](https://packages.debian.org/jessie/python/python3-pip) |
 
+----------------------------------
 
-## Remotely Accessing your Pi
+### Remotely Accessing your Pi
 
-### SSH
+#### SSH
 
 * From a Mac just type the following into Terminal `ssh pi@192.168.X.YY`, using the actual IP address of your RPi.
 
 * On Windows, install [puTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/).
 
 
-### VNC 
+#### VNC 
 
 * On a Mac, just type the following into Terminal: `vnc://192.168.X.YY` using the actual IP address of your RPi.
 

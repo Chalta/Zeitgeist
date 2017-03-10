@@ -1,8 +1,9 @@
 #---------------------------------------
 # Description
 #---------------------------------------
-
-# 
+#
+# Example cron entries for daily reboot, real-time PCO Live timers and offline python-based timers.
+#
 #---------------------------------------
 # Instructions
 #---------------------------------------
@@ -12,7 +13,9 @@
 #       Edit cron timings - validate your expressions here: https://crontab.guru
 #       Replace XXXXXXX with the service type ID of each service (can be found by clicking "permalink" in the "Share" menu when viewing a single service).
 #       See here for more on permalinks: https://planning.center/2015/arrangements-keys-permalinks-android/
-
+#
+#       To run an offline python timer instead of PCO Live, enter the stop time in hours [XX] and minutes [YY]. 
+#       Use the 24-hour clock. (e.g. 10:15 pm = 22 15)
 
 #--------------------------------------------
 # Daily Reboot - just in case someting gets out of sync (esp. browser fullscreen state)
@@ -35,23 +38,23 @@
 0       7       *       *       *       sudo /home/pi/rpi-hdmi.sh on
 
 #--------------------------------------------
-# Weekly Sunday Services - Examples -Examples - Replace XXXXXXXXX with the appropriate service IDs from the PCO permalinks in the "share" menu for each service.
+# Weekly Sunday Services - Examples 
 #--------------------------------------------
 
-#09:00 Services
-0,10    8       *       *       0       DISPLAY=:0 /home/pi/pco_live.sh XXXXXX
+#09:00 Services  - starting at 8:50 am on Sundays, starts a generic offline countdown to 10:05am.
+50    8       *       *       0       DISPLAY=:0 /home/pi/timer.py 10 05
 
 #11:00 & 18:30 Services
-20,30   10      *       *       0       DISPLAY=:0 /home/pi/pco_live.sh XXXXXX
-20,30   15,17   *       *       0       DISPLAY=:0 /home/pi/pco_live.sh XXXXXX
+20,30   10      *       *       0       DISPLAY=:0 /home/pi/pco-live.sh XXXXXX
+#20,30   15,17   *       *       0       DISPLAY=:0 /home/pi/pco-live.sh XXXXXX
 
 #--------------------------------------------
 # Special Services
 #--------------------------------------------
 
 # Christmas Eve – Every December 24
-0,20    13      24      12      *       DISPLAY=:0 /home/pi/pco_live.sh XXXXXX
+0,20    13      24      12      *       DISPLAY=:0 /home/pi/pco-live.sh XXXXXX
 
 # Good Friday – Run every Thursday/Friday in March/April – when ‘goodfriday’ argument is set, bash script will abort on any day that isn’t between Maundy Thursday and Easter Sunday, inclusive.
-0,20    1,9     *       3-4     4-5     DISPLAY=:0 /home/pi/pco_live.sh XXXXXX goodfriday
+0,20    1,9     *       3-4     4-5     DISPLAY=:0 /home/pi/pco-live.sh XXXXXX goodfriday
 

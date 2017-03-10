@@ -1,20 +1,37 @@
 #!/bin/sh
-
+#
 #---------------------------------------
 # Description
 #---------------------------------------
-
+#
 # Launch PCO Live in a Chromium web browser.
 # Will show the next or currently live service for a specified service type, provided as an argument in the crontab.
-
+#
+#---------------------------------------
+# License
+#---------------------------------------
+#
+#This program is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#
+#You should have received a copy of the GNU General Public License
+#along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
 #---------------------------------------
 # Instructions
 #---------------------------------------
-
+#
 #Instructions: Put this script in /home/pi/PCOlive.sh
 #Then, make it executable: chmod +x /home/pi/rpi-hdmi.sh
 #Then update cron tab with the optional cron entries in this repository: https://github.com/Chalta/Zeitgeist/blob/master/cron
-
+#
 #---------------------------------------
 # Code
 #---------------------------------------
@@ -88,8 +105,9 @@ fi
 
 
 
-
-
+#hit escape twice in case a python timer is open.
+xdotool key Escape
+xdotool key Escape
 
 #Operate on the first display on the local machine
 DISPLAY=:0
