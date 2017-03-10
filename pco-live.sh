@@ -160,4 +160,4 @@ xdotool key F11
 #turn on the HDMI output, just in case it was off.
 sudo /home/pi/rpi-hdmi.sh  on /dev/null 2>&1 &
 
-exit
+exit 
