@@ -57,4 +57,3 @@
 
 # Good Friday – Run every Thursday/Friday in March/April – when ‘goodfriday’ argument is set, bash script will abort on any day that isn’t between Maundy Thursday and Easter Sunday, inclusive.
 0,20    1,9     *       3-4     4-5     DISPLAY=:0 /home/pi/pco-live.sh XXXXXX goodfriday
-
