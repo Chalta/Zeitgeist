@@ -173,7 +173,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 15. Set your Raspbian desktop background to the official 1920x1080p [Zeitgeist wallpaper](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist-wallpaper.png)!
    *  `wget -N https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist-wallpaper.png -P /home/pi/`
-   *  `sudo update-alternatives --config desktop-background`
+   *  `pcmanfm --desktop-pref`
 
 
 
