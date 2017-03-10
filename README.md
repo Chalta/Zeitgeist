@@ -67,7 +67,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
   *   For our timer.py application, we have a single module dependency - [pyglet](https://bitbucket.org/pyglet/pyglet/wiki/Home) a windowing and media library which we use to display the timer. The rest of the required modules are included in default python installs. Python packages are best installed with ```pip``` which we installed in the step above. Install pyglet as below:
   
       ```
-      sudo pip3 install pyglet`
+      sudo pip3 install pyglet
       ```
       
   *   (Note that we are using pip**3** to install Python 3 modules. Python 2 is ending active development and entering an extended maintenance-only phase.)
