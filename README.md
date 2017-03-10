@@ -115,7 +115,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 ##Make it Bulletproof
 
-12. Activate the built-in systemd software/hardware watchdog to automatically reboot the Pi if hung.  [[Ref]](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=147501&p=972709#p972709)
+12. Activate the built-in *systemd* software/hardware *watchdog* service to automatically reboot the Pi if hung.  [[Ref]](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=147501&p=972709#p972709)
 
   * `sudo nano /etc/systemd/system.conf`
   *  Uncomment and change these two lines from:
