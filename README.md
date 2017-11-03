@@ -1,6 +1,6 @@
 ![zeigeist logo](https://github.com/Chalta/Zeitgeist/blob/master/zeitgeist-wallpaper.png "Zeitgeist Logo")
 
-###*From German Zeitgeist, Zeit ‘time’ + Geist ‘spirit.’*
+### *From German Zeitgeist, Zeit ‘time’ + Geist ‘spirit.’*
 
 Scheduled delivery of service timers over HDMI in a low-cost, lightweight package using the Raspberry Pi 3 single-board computer. Supports both real-time [Planning Center LIVE](https://planning.center/2014/live-3/) timer and an offline generic countdown timer.
 
@@ -22,7 +22,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 ----------------------------------
 
-##Comissioning your Pi
+## Comissioning your Pi
 
 1. Purchase a Raspberry Pi 3, Case, HDMI cable, USB Micro charging cable and Micro SD Card.
   * The official case is very well-designed, and also available in black. 
@@ -74,7 +74,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 ----------------------------------
 
-##Customizing
+## Customizing
 
 8.	Configure sleep settings using the *nano* command line text editor.
   *  `sudo nano /etc/lightdm/lightdm.conf`
@@ -95,7 +95,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 ----------------------------------
 
-##Adding and Scheduling Timers
+## Adding and Scheduling Timers
 
 10.	Add shell functions to your /home/ folder. It's easiest to use the built-in LeafPad text editor for this step.
   * Place [this file](https://github.com/Chalta/Zeitgeist/blob/master/rpi-hdmi.sh) in /home/pi/rpi-hdmi.sh
@@ -113,7 +113,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 ----------------------------------
 
-##Make it Bulletproof
+## Make it Bulletproof
 
 12. Activate the built-in *systemd* software/hardware *watchdog* service to automatically reboot the Pi if hung.  [[Ref]](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=147501&p=972709#p972709)
 
@@ -162,7 +162,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 ----------------------------------
 
-##Final Steps
+## Final Steps
 
 13. Run pco-live.sh and configure the timers to suit your requirements. As a recommended starting point:
    
@@ -182,7 +182,7 @@ Open-source and licensed under [GPLv3](https://github.com/Chalta/Zeitgeist/blob/
 
 ----------------------------------
 
-##Appendices
+## Appendices
 
 ----------------------------------
 
