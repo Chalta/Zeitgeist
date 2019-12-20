@@ -72,12 +72,16 @@
 #---------------------------------------
 
 
-
+import os
 import sys
 import pyglet
 import datetime
 import time
 from datetime import timedelta
+
+
+#turn on the HDMI adapter, in case it is off
+os.system ('sudo /home/pi/rpi-hdmi.sh on')
 
 window = pyglet.window.Window(fullscreen=True)
 
